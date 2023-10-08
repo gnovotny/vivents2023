@@ -17,8 +17,9 @@ export default {
         '8xl': '1920px',
       },
       screens: {
-        '-sm': { max: '639px' },
-        '-md': { max: '767px' },
+        '-sm': { max: '639.99px' },
+        '-md': { max: '767.99px' },
+        '-lg': { max: '1023.99px' },
         '3xl': '1600px',
         'not-tall': { raw: '(max-height: 850px)' },
         'high-dpi': { raw: '(min-resolution: 97dpi)' },

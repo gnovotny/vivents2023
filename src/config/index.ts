@@ -1,15 +1,15 @@
 export const INFO = {
-  name: 'Lalique',
-  googlePlaceUrl: 'https://goo.gl/maps/Mc9hdG6H4iRC3FrcA',
-  streetAddress: 'Zürichstrasse 96',
-  streetAddress2: '8910 Affoltern am Albis',
+  name: 'Vivents',
+  googlePlaceUrl: 'https://maps.app.goo.gl/HxV6ENuAr4GkrsfX9',
+  streetAddress: 'Kanzleistrasse 122',
+  streetAddress2: '8004 Zürich',
   tel: '044 760 30 10',
-  email: 'info@federle-geschenke.ch',
-  instagramUrl: 'https://www.instagram.com/federle-geschenke',
+  email: 'info@vivents.com',
+  instagramUrl: 'https://www.instagram.com/vivents',
 }
 
-export const CANONICAL_URL = 'https://lesmuses.lalique.com'
-export const OG_IMAGE_URL = '/assets/og-square.jpg?v=2'
+export const CANONICAL_URL = 'https://vivents.com'
+export const OG_IMAGE_URL = '/images/og-square.jpg'
 export const OG_IMAGE = {
   url: OG_IMAGE_URL,
   width: 512,
@@ -18,21 +18,6 @@ export const OG_IMAGE = {
   type: 'image/png',
 }
 
-export const PRELOAD_FONTS = [
-  {
-    id: 'EurostileExtReg',
-    href: '/fonts/eurostile/EurostileExtReg.woff2',
-    type: 'font/woff2',
-  },
-  {
-    id: 'EurostileExtMed',
-    href: '/fonts/eurostile/EurostileExtMed.woff2',
-    type: 'font/woff2',
-  },
-  {
-    id: 'EurostileExtBla',
-    href: '/fonts/eurostile/EurostileExtBla.woff2',
-    type: 'font/woff2',
-  },
-]
 export const GTM_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID || ''
+
+export const GOOGLE_MAPS_API_KEY = 'AIzaSyCfYrlcQ1mfcbVP_sONxy448EWAu0eY_4k'

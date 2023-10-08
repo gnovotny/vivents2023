@@ -1,13 +1,7 @@
 import { AppProps } from 'next/app'
 
-
 const IndexPage = ({ pageProps }: AppProps) => {
-
-  return (
-    <>
-      asdf
-    </>
-  )
+  return <></>
 }
 
 export default IndexPage
