@@ -1,0 +1,32 @@
+.root {
+  @apply relative max-h-full w-full box-border overflow-hidden px-2 lg:px-0
+  inline-block !h-full;
+
+  & .footer {
+    @apply hidden md:block;
+  }
+}
+
+.footer {
+  @apply pt-7;
+
+  & .name,
+  & .position {
+    @apply pt-0 max-w-full w-full leading-tight text-left;
+  }
+
+  & .name {
+    @apply font-bold;
+  }
+
+  & .position {
+    @apply font-bold;
+    /*
+    @apply font-serif italic;
+    */
+  }
+}
+
+.imageContainer {
+  @apply relative w-full h-full lg:h-auto lg:w-full;
+}

@@ -21,7 +21,7 @@ export type LinkProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyo
 export type LinkType = React.ForwardRefExoticComponent<LinkProps>
 
 const Link: LinkType = forwardRef(
-  ({ className = '', href, onClick, isActive, children, lineProps, underlined = true, ...props }, ref) => {
+  ({ className = '', href, onClick, isActive, children, lineProps, underlined = false, ...props }, ref) => {
     const isInternal = !!href && (typeof href !== 'string' || href.startsWith('/'))
     const isHashOrMailOrTelOrClickHandler =
       !isInternal &&

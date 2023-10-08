@@ -1,0 +1,28 @@
+.root {
+  @apply relative w-full flex flex-col items-center justify-center md:block  md:w-auto md:h-auto select-none md:select-auto overflow-hidden;
+}
+
+
+.slider {
+  @apply relative w-full md:h-full max-h-[22rem] md:max-h-[initial] transition-opacity duration-150 md:w-auto md:h-auto opacity-0 md:opacity-100;
+  /* md:justify-center md:flex md:flex-row md:flex-wrap*/
+
+  /*@screen lg {
+    & > div {
+      @apply px-4 py-4;
+    }
+  }*/
+}
+
+.sliderRow {
+  @apply flex flex-row justify-start relative space-x-4;
+
+  /*& > div {
+    @apply px-4 py-4;
+  }*/
+}
+
+.slider.show {
+  opacity: 1;
+}
+
