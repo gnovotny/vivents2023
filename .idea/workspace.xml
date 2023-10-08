@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/videos/intro.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/loop.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/bg/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/footer/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/header/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/main/Main.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/main/PageTransitionStack.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/main/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/404.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/500.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lalique.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/LALIQUE_LesMuses_Teaser.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/LALIQUE_Shot.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/og-square.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/og-square.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/MiddleSvg.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/Steps.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/bottom-new.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/bottom.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/header-logo-old.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/header-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/middle-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/middle-new.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/middle-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/middle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/top-logo-old.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/top-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/top-new.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/top.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/[[...step]].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/fonts/eurostile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/fonts/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2WTzIZV4R6vYgWDtrvqMPtv0K07" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/layout/bg",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.css.dialects",
+    "ts.external.directory.path": "/home/g/projects/artdeal/vivents2023/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/layout/bg" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/public/videos" />
+      <recent name="$PROJECT_DIR$/src/components/layout" />
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.chrome">
+    <configuration name="chrome" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.chrome" />
+      <item itemvalue="npm.dev" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="" />
+      <created>1696771278748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696771278748</updated>
+      <workItem from="1696771280385" duration="5921000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

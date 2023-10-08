@@ -1,0 +1,24 @@
+@tailwind utilities;
+
+@layer utilities {
+
+  .contain-strict {
+    contain: strict;
+  }
+
+  .h-header {
+    @apply h-[var(--header-height)]
+  }
+
+  .fit-header-h {
+    @apply h-[calc(100vh-var(--header-height,3.5rem))] !h-[calc(100dvh-var(--header-height,3.5rem))]
+  }
+
+  .fit-header-pt {
+    @apply pt-[var(--header-height)];
+  }
+
+  .max-w-page {
+    @apply max-w-[var(--max-width-page)]
+  }
+}

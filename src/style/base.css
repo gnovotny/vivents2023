@@ -1,0 +1,68 @@
+:root {
+  --primary: #000000;
+  --secondary: #FFFFFF;
+  --text-link: var(--secondary);
+
+/*  --font-sans: var(--font-eurostile-ext);*/
+  --font-heading: var(--font-sans);
+
+/*  --header-height: 3.5rem;*/
+  --max-width-page: 2460px;
+}
+
+/*@media (orientation: landscape) {
+  :root {
+    --header-height: 3.5rem;
+  }
+}
+
+@screen md {
+  :root {
+    --header-height: 3.5rem;
+  }
+}*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--secondary);
+  color: var(--primary);
+  overscroll-behavior-x: none;
+}
+
+body {
+  position: relative;
+  margin: 0 auto !important;
+  max-width: var(--max-width-page);
+}
+
+main {
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  color: var(--secondary);
+  background: var(--primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1;
+}
+
+

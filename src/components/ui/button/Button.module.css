@@ -1,0 +1,22 @@
+.root {
+  @apply relative uppercase text-primary cursor-pointer inline-flex
+  h-12 px-0 py-0 leading-none transition-all ease-in-out duration-500
+  text-center justify-center
+  items-center text-[0.7rem]
+  tracking-wide border border-primary rounded-lg
+  font-black shadow-[none] outline-none
+  backdrop-blur bg-white/30;
+}
+
+.root:hover {
+  @apply md:bg-white md:text-[#C28A9E];
+}
+
+.root:focus {
+  @apply outline-none;
+}
+
+.root:hover,
+.root:focus {
+  box-shadow: none;
+}

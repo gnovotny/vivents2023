@@ -1,0 +1,8 @@
+@tailwind base;
+@import 'base.css';
+
+@tailwind components;
+@import 'utilities.css';
+@import 'animations.css';
+@import 'misc.css';
+@import 'chrome-bug.css';
