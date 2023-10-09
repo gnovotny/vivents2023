@@ -15,7 +15,7 @@ const Primary = ({ pageProps, children }: PrimaryProps) => {
   const isHome = useIsHome()
   return (
     <section
-      className={clsx('relative flex flex-col justify-between w-full max-w-lg lg:h-full p-common', {
+      className={clsx('relative flex flex-col justify-between w-full max-w-lg h-full p-common', {
         '-lg:h-auto -lg:pb-0': isHome,
       })}
     >

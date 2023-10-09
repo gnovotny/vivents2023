@@ -1,10 +1,12 @@
 import React, { MutableRefObject, useRef, useState } from 'react'
 
 import clsx from 'clsx'
+import { useIsHome } from '@/lib/hooks'
 
 const Bg = () => {
   const introVideoRef = useRef<HTMLVideoElement>() as MutableRefObject<HTMLVideoElement>
   const loopVideoRef = useRef<HTMLVideoElement>() as MutableRefObject<HTMLVideoElement>
+  const isHome = useIsHome()
 
   const [introComplete, setIntroComplete] = useState(false)
 
@@ -21,7 +23,9 @@ const Bg = () => {
         <video
           ref={loopVideoRef}
           // className='absolute left-0 bottom-0 lg:top-0 lg:object-cover lg:object-center w-full lg:h-full'
-          className='absolute inset-0 object-cover object-center w-full h-full'
+          className={clsx('absolute inset-0 object-cover object-center w-full h-full', {
+            '-lg:!opacity-30': !isHome
+          })}
           // className='absolute left-0 bottom-0 lg:top-0 object-cover object-center w-full lg:w-full lg:h-full'
           preload='auto'
           muted
@@ -37,6 +41,7 @@ const Bg = () => {
           ref={introVideoRef}
           className={clsx('absolute inset-0 object-cover object-center w-full h-full', {
             hidden: introComplete,
+            '-lg:!opacity-30': !isHome,
           })}
           preload='auto'
           autoPlay

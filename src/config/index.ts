@@ -1,6 +1,7 @@
 export const INFO = {
   name: 'Vivents',
   googlePlaceUrl: 'https://maps.app.goo.gl/HxV6ENuAr4GkrsfX9',
+  company: 'ArtDeal AG',
   streetAddress: 'Kanzleistrasse 122',
   streetAddress2: '8004 Zürich',
   tel: '044 760 30 10',

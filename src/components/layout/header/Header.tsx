@@ -70,8 +70,8 @@ const Header = ({ pageProps, className }: HeaderProps) => {
           </NextLink>
         </div>
         <div
-          className={clsx('hidden flex-row space-x-3', {
-            '!flex': pathname === '/contact',
+          className={clsx('flex flex-row space-x-3 opacity-0 transition-opacity duration-300', {
+            '!opacity-100': pathname === '/contact',
           })}
         >
           <a

@@ -18,13 +18,13 @@ const Secondary = ({ pageProps, children }: PrimaryProps) => {
       className={clsx(
         'relative flex flex-col justify-between w-full max-w-lg lg:max-w-md lg:h-full p-common -lg:!pt-0 pt-common lg:z-20',
         {
-          'h-full': isHome,
+          // 'h-full': isHome,
         }
       )}
     >
       <div
-        className={clsx('lg:pb-10', {
-          'hidden lg:block': !isHome,
+        className={clsx('lg:pb-10', 'hidden lg:block', {
+          // 'hidden lg:block': !isHome,
         })}
       >
         <IntroProse />

@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l" />
+    <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
+      <change afterPath="$PROJECT_DIR$/src/components/common/clients/assets/bucherer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/clients/assets/hockey.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/clients/assets/jeanremy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/clients/assets/philoro.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/clients/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/map/static.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/sections/primary/Primary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/sections/primary/Primary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/clients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/clients.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/ui",
+    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/common",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,13 +70,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common" />
+      <recent name="$PROJECT_DIR$/public/images/clients" />
+      <recent name="$PROJECT_DIR$/src/components/common/map" />
       <recent name="$PROJECT_DIR$/src/components/ui" />
       <recent name="$PROJECT_DIR$/src/components/icons" />
-      <recent name="$PROJECT_DIR$/src/components/common" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/common/team" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/clients/assets" />
       <recent name="$PROJECT_DIR$/src/components/layout/header/assets" />
       <recent name="$PROJECT_DIR$/src/pages" />
     </key>
@@ -95,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696771278748</updated>
       <workItem from="1696771280385" duration="20560000" />
-      <workItem from="1696834532074" duration="18506000" />
+      <workItem from="1696834532074" duration="22583000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />

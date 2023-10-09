@@ -16,7 +16,7 @@ const Footer = ({ pageProps }: HeaderProps) => {
         <ViventsLogoLink />
       </div>
       <div className='leading-none uppercase'>
-        <Text className='leading-none text-[0.5rem] lg:text-xs'>© 2023 All rights reserved.</Text>
+        <Text className='leading-none text-[0.55rem] lg:text-xs'>© 2023 All rights reserved.</Text>
       </div>
     </footer>
   )
