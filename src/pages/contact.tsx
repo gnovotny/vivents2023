@@ -1,10 +1,11 @@
+import { useCallback } from 'react'
+
+import { m, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
-import { m, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import { useCallback } from 'react'
-import { useMediaQuery } from '@/lib/hooks'
+
+import { useMediaQuery, useSize } from '@/lib/hooks'
 import { down } from '@/lib/utils'
-import { useSize } from '@/lib/hooks/useSize'
 
 const Map = dynamic(() => import('@/components/common/map').then((m) => m.default), {
   ssr: false,
@@ -34,9 +35,7 @@ const ContactPage = ({ pageProps }: AppProps) => {
   )
 
   return (
-    <div
-      className='relative w-full aspect-square overflow-hidden'
-    >
+    <div className='relative w-full overflow-hidden aspect-square'>
       <m.div
         className='w-full h-full md:w-[110%)] md:h-[110%)] md:absolute md:inset-[-5%] will-change-[transform]'
         onMouseMove={!screenMdDown ? (e) => handleMouseMove(e) : undefined}

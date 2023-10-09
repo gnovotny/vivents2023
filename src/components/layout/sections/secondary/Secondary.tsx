@@ -15,9 +15,12 @@ const Secondary = ({ pageProps, children }: PrimaryProps) => {
   const isHome = useIsHome()
   return (
     <section
-      className={clsx('relative flex flex-col justify-between w-full max-w-lg lg:max-w-md lg:h-full p-container', {
-        'h-full': isHome,
-      })}
+      className={clsx(
+        'relative flex flex-col justify-between w-full max-w-lg lg:max-w-md lg:h-full p-container lg:z-20',
+        {
+          'h-full': isHome,
+        }
+      )}
     >
       <div
         className={clsx('lg:pb-10', {

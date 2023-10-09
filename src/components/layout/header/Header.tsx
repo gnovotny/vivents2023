@@ -2,6 +2,7 @@ import React from 'react'
 
 import clsx from 'clsx'
 import { AppProps } from 'next/app'
+import { usePathname } from 'next/navigation'
 
 import Link, { LinkProps } from '@/components/ui/link'
 
@@ -9,9 +10,18 @@ type HeaderProps = {
   pageProps: AppProps['pageProps']
 }
 
-const NavItem = ({ children, className, ...props }: LinkProps) => (
+const NAV_ITEMS = [
+  { name: 'Company', href: '/company' },
+  { name: 'Clients', href: '/clients' },
+  { name: 'App', href: '/app' },
+  { name: 'Contact', href: '/contact' },
+]
+
+const NavItem = ({ children, className, isActive, ...props }: LinkProps) => (
   <Link
-    className={clsx('uppercase thinner', className)}
+    className={clsx('uppercase thinner leading-none px-4 py-3 border rounded-xl border-transparent', {
+      '!border-primary ': isActive
+    }, className)}
     {...props}
   >
     {children}
@@ -19,13 +29,19 @@ const NavItem = ({ children, className, ...props }: LinkProps) => (
 )
 
 const Header = ({ pageProps }: HeaderProps) => {
+  const pathname = usePathname()
   return (
-    <header className='relative w-full'>
+    <header className='relative w-full -mt-3'>
       <nav className='flex justify-between w-full'>
-        <NavItem href='/company'>Company</NavItem>
-        <NavItem href='/clients'>Clients</NavItem>
-        <NavItem href='/app'>App</NavItem>
-        <NavItem href='/contact'>Contact</NavItem>
+        {NAV_ITEMS.map(({ name, href }) => (
+          <NavItem
+            key={name}
+            href={href}
+            isActive={href === pathname}
+          >
+            {name}
+          </NavItem>
+        ))}
       </nav>
     </header>
   )

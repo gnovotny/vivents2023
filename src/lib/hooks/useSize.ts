@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import { ResizeObserver as Polyfill } from '@juggle/resize-observer'
 import pkg from 'debounce'
 
-const isBrowser = typeof window !== 'undefined'
+import { isClient } from '@/lib/utils'
+
 export interface Size {
   width: number
   height: number
@@ -14,19 +15,17 @@ type ConfigProps = {
 }
 
 /*
- * Triggers a resize only if the Canvas DOM element changed dimensions - not on window resize event
+ * Triggers a resize only if a DOM element or window changed dimensions
  *
  * This is to avoid costly re-renders when the URL bar is scrolled away on mobile
- *
- * Based on: https://usehooks.com/useSize/
  */
 
-export function useSize({ debounce = 0 }: ConfigProps = {}) {
+export default function useSize({ debounce = 0 }: ConfigProps = {}) {
   // Initialize state with undefined width/height so server and client renders match
   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
   const [size, setSize] = useState<Size>({
-    width: isBrowser ? window.innerWidth : Infinity,
-    height: isBrowser ? window.innerHeight : Infinity,
+    width: isClient ? window.innerWidth : Infinity,
+    height: isClient ? window.innerHeight : Infinity,
   })
 
   useEffect(() => {

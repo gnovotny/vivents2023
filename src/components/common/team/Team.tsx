@@ -13,7 +13,7 @@ import { down } from '@/lib/utils'
 import TeamCard from './card'
 import TeamSlider from './slider'
 import { Member } from './types'
-import members from '@/components/common/team/members'
+import members from './members'
 
 type TeamGroupHeadingProps = PropsWithChildren & {
   isActive: boolean
