@@ -23,7 +23,7 @@ const SignupUI: FC = () => {
 
   const open = () => openSignup()
 
-  // useTimeout(open, 1000)
+  useTimeout(open, 0)
 
   return (
     <Signup

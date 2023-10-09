@@ -1,9 +1,7 @@
 import { Dispatch, Fragment, ReactNode, SetStateAction } from 'react'
 
 import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/solid'
 
-import Text from '@/components/ui/text'
 import XSVG from '@/components/icons/x.svg'
 
 type DrawerProps = {
@@ -22,24 +20,11 @@ export default function Drawer({ title = '', description = '', children, isOpen,
     >
       <Dialog
         as='div'
-        className='fixed inset-0 z-10 overflow-hidden'
+        className='fixed inset-0 z-20 overflow-hidden'
         onClose={onClose}
       >
-        <div className='absolute inset-0 overflow-hidden'>
-          {/*<Transition.Child*/}
-          {/*  as={Fragment}*/}
-          {/*  enter='ease-in-out duration-500'*/}
-          {/*  enterFrom='opacity-0'*/}
-          {/*  enterTo='opacity-100'*/}
-          {/*  leave='ease-in-out duration-500'*/}
-          {/*  leaveFrom='opacity-100'*/}
-          {/*  leaveTo='opacity-0'*/}
-          {/*>*/}
-          {/*  <Dialog.Overlay className='absolute inset-0 bg-black bg-opacity-60 transition-opacity' />*/}
-          {/*</Transition.Child>*/}
-          <Dialog.Overlay className='absolute inset-0' />
-
-          <div className='fixed bottom-0 right-0 flex w-full max-w-full lg:inset-y-0 lg:w-auto lg:pl-10'>
+        <Dialog.Overlay className='relative flex flex-col justify-end w-full h-full lg:justify-center lg:items-center'>
+          <div className='flex w-full lg:w-auto'>
             <Transition.Child
               as={Fragment}
               enter='transform transition ease-in-out duration-500 sm:duration-500'
@@ -50,14 +35,11 @@ export default function Drawer({ title = '', description = '', children, isOpen,
               leaveTo='opacity-0 -lg:translate-y-full'
             >
               <div className='w-full'>
-                {/*divide-y divide-gray-200*/}
                 <div className='flex flex-col h-full bg-white shadow-xl'>
                   <div className='p-4 lg:px-6 lg:py-0 lg:pt-[8rem]'>
                     <div className='flex items-start justify-between'>
                       <div>
-                        <Dialog.Title className='text-sm leading-[1.05] uppercase'>
-                          {title}
-                        </Dialog.Title>
+                        <Dialog.Title className='text-sm uppercase leading-[1.05]'>{title}</Dialog.Title>
                       </div>
                       <div className=''>
                         <button
@@ -66,10 +48,6 @@ export default function Drawer({ title = '', description = '', children, isOpen,
                           onClick={() => onClose(false)}
                         >
                           <span className='sr-only'>Close panel</span>
-                          {/*<XMarkIcon*/}
-                          {/*  className='w-6 h-6'*/}
-                          {/*  aria-hidden='true'*/}
-                          {/*/>*/}
                           <XSVG
                             className='w-4 h-auto'
                             aria-hidden='true'
@@ -100,7 +78,7 @@ export default function Drawer({ title = '', description = '', children, isOpen,
               </div>
             </Transition.Child>
           </div>
-        </div>
+        </Dialog.Overlay>
       </Dialog>
     </Transition.Root>
   )

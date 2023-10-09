@@ -47,7 +47,8 @@ const Header = ({ pageProps, className }: HeaderProps) => {
   const isHome = useIsHome()
   return (
     <header className={clsx('relative w-full', className)}>
-      <nav className='flex justify-between -mt-2 -ml-4 text-xs lg:-mt-3 w-[calc(100%+2rem)] lg:text-base'>
+      {/*-mt-2 -ml-4 lg:-mt-3 w-[calc(100%+2rem)]*/}
+      <nav className='flex justify-between  text-xs -mt-2 lg:-mt-3 w-full   lg:text-base'>
         {NAV_ITEMS.map(({ name, href, className }) => (
           <NavItem
             key={name}

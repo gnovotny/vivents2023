@@ -51,6 +51,21 @@ body {
 main {
 }
 
+/*
+@screen -lg {
+  .primary, .secondary {
+    @supports (-webkit-text-stroke: 0.025em var(--secondary)) {
+      mix-blend-mode: multiply;
+    }
+  }
+}
+*/
+
+.primary, .secondary {
+    mix-blend-mode: multiply;
+}
+
+
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

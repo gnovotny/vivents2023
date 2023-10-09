@@ -3,25 +3,24 @@ import React, { useCallback } from 'react'
 import clsx from 'clsx'
 import { useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { AppProps } from 'next/app'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import NextLink from 'next/link'
 
-import staticMapImg from '@/components/common/map/static.jpg'
 import discord from '@/components/layout/header/assets/discord.png'
 import insta from '@/components/layout/header/assets/insta.png'
 import linkedin from '@/components/layout/header/assets/linkedin.png'
+import { Link } from '@/components/ui'
 import Text from '@/components/ui/text'
 import Title from '@/components/ui/title'
+import { INFO } from '@/config'
 import { useMediaQuery, useSize } from '@/lib/hooks'
 import { down } from '@/lib/utils'
+// import Map from '@/components/common/map'
 
-
-import { INFO } from '@/config'
-import { Link } from '@/components/ui'
-
-// const Map = dynamic(() => import('@/components/common/map').then((m) => m.default), {
-//   ssr: false,
-// })
+const Map = dynamic(() => import('@/components/common/map').then((m) => m.default), {
+  ssr: false,
+})
 const ContactPage = ({ pageProps }: AppProps) => {
   const { height: wHeight, width: wWidth } = useSize()
 
@@ -62,12 +61,12 @@ const ContactPage = ({ pageProps }: AppProps) => {
         <Map />
       </m.div>*/}
         <div className='relative w-full h-full'>
-          {/*<Map />*/}
-          <Image
-            src={staticMapImg}
-            alt='map'
-            className='object-cover w-full h-full'
-          />
+          <Map />
+          {/*<Image*/}
+          {/*  src={staticMapImg}*/}
+          {/*  alt='map'*/}
+          {/*  className='object-cover w-full h-full'*/}
+          {/*/>*/}
         </div>
       </div>
       <div className='flex flex-col gap-6'>
@@ -76,15 +75,16 @@ const ContactPage = ({ pageProps }: AppProps) => {
             <div className='flex flex-col gap-1'>
               <Title>Address</Title>
               <Text className='leading-none'>
-              <span className='lg:hidden'>
-                {INFO.company}<br />
-              </span>
+                <span className='lg:hidden'>
+                  {INFO.company}
+                  <br />
+                </span>
                 {INFO.streetAddress}
                 <br />
                 {INFO.streetAddress2}
               </Text>
             </div>
-            <div className='hidden lg:flex flex-col gap-1'>
+            <div className='flex-col hidden lg:flex gap-1'>
               <Title>Social Media</Title>
               <div className={clsx('hidden lg:flex flex-row justify-end pt-2 space-x-3')}>
                 <a
@@ -125,13 +125,13 @@ const ContactPage = ({ pageProps }: AppProps) => {
               </NextLink>
             </div>
             <div className='flex flex-col gap-1'>
-              <Link href='/imprint'><Title>Imprint</Title></Link>
+              <Link href='/imprint'>
+                <Title>Imprint</Title>
+              </Link>
             </div>
           </div>
         </div>
-        <div>
-          SIGNUP TODO
-        </div>
+        <div>SIGNUP TODO</div>
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import React, { MutableRefObject, useRef, useState } from 'react'
 
 import clsx from 'clsx'
+
 import { useIsHome } from '@/lib/hooks'
 
 const Bg = () => {
@@ -19,12 +20,12 @@ const Bg = () => {
         }
       )}
     >
-      <div className='relative h-full w-full'>
+      <div className='relative w-full h-full'>
         <video
           ref={loopVideoRef}
           // className='absolute left-0 bottom-0 lg:top-0 lg:object-cover lg:object-center w-full lg:h-full'
           className={clsx('absolute inset-0 object-cover object-center w-full h-full', {
-            '-lg:!opacity-30': !isHome
+            '-lg:!opacity-30': !isHome,
           })}
           // className='absolute left-0 bottom-0 lg:top-0 object-cover object-center w-full lg:w-full lg:h-full'
           preload='auto'

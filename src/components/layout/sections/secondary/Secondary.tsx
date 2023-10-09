@@ -16,7 +16,7 @@ const Secondary = ({ pageProps, children }: PrimaryProps) => {
   return (
     <section
       className={clsx(
-        'relative flex flex-col justify-between w-full max-w-lg lg:max-w-md lg:h-full p-common -lg:!pt-0 pt-common lg:z-20',
+        'secondary relative flex flex-col justify-between w-full max-w-lg lg:max-w-md lg:h-full p-common -lg:!pt-0 pt-common lg:z-20',
         {
           // 'h-full': isHome,
         }

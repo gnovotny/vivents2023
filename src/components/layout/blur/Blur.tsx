@@ -1,14 +1,13 @@
-import React, { MutableRefObject, useRef, useState } from 'react'
+import React from 'react'
 
 import clsx from 'clsx'
-import { useStore } from '@/lib/store'
+
 import { useIsHome } from '@/lib/hooks'
+import { useStore } from '@/lib/store'
 
 const Blur = () => {
-
   const { displaySignup } = useStore()
   const isHome = useIsHome()
-
 
   return (
     <div
@@ -19,8 +18,7 @@ const Blur = () => {
           '-lg:!backdrop-blur-xl': !isHome,
         }
       )}
-    >
-    </div>
+    />
   )
 }
 
