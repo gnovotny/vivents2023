@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import ViventsRingsLogo from './ViventsRingsLogo'
 import ViventsTextLogo from './ViventsTextLogo'
+import { useIsHome } from '@/lib/hooks'
 
 const ViventsLogoLink = ({ className = '', ...props }) => (
   <Link
@@ -12,8 +13,10 @@ const ViventsLogoLink = ({ className = '', ...props }) => (
     className={clsx('flex flex-row items-center justify-center flex-1 pointer-events-auto space-x-2', className)}
     {...props}
   >
-    <ViventsRingsLogo className='w-auto h-4 lg:h-9' />
-    <ViventsTextLogo className='w-auto h-4 lg:h-9' />
+    <ViventsRingsLogo className='w-auto h-5 lg:h-9' />
+    <ViventsTextLogo className={clsx('w-auto h-5 lg:h-9', {
+      'hidden lg:block': !useIsHome()
+    })} />
   </Link>
 )
 

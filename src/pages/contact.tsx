@@ -35,16 +35,17 @@ const ContactPage = ({ pageProps }: AppProps) => {
   )
 
   return (
-    <div className='relative w-full overflow-hidden aspect-square'>
+    <div className='relative w-full overflow-hidden rounded-xl aspect-square'>
       <m.div
-        className='w-full h-full md:w-[110%)] md:h-[110%)] md:absolute md:inset-[-5%] will-change-[transform]'
-        onMouseMove={!screenMdDown ? (e) => handleMouseMove(e) : undefined}
-        style={{
-          transformStyle: 'preserve-3d',
-          backfaceVisibility: 'hidden',
-          x: mapInnerX,
-          y: mapInnerY,
-        }}
+        className='w-full h-full md:w-full md:absolute md:inset-0 will-change-[transform]'
+        // className='w-full h-full md:w-[110%)] md:h-[110%)] md:absolute md:inset-[-5%] will-change-[transform]'
+        // onMouseMove={!screenMdDown ? (e) => handleMouseMove(e) : undefined}
+        // style={{
+        //   transformStyle: 'preserve-3d',
+        //   backfaceVisibility: 'hidden',
+        //   x: mapInnerX,
+        //   y: mapInnerY,
+        // }}
       >
         <Map />
       </m.div>

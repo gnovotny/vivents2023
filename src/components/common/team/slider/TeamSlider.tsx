@@ -3,9 +3,10 @@ import React, { Children, isValidElement, useState, useRef, useEffect, ReactElem
 import cn from 'clsx'
 import { useKeenSlider } from 'keen-slider/react'
 
+import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
+import { down } from '@/lib/utils'
+
 import s from './TeamSlider.module.css'
-import {useMediaQuery} from "@/lib/hooks/useMediaQuery";
-import {down} from "@/lib/utils/screens";
 
 const chunk = (arr, size) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (v, i) => arr.slice(i * size, i * size + size))
@@ -32,7 +33,6 @@ const TeamSlider: React.FC<CustomSliderProps> = ({
   const sliderContainerRef = useRef<HTMLDivElement>(null)
 
   const isVerySmall = useMediaQuery(down('md'))
-
 
   const [ref, slider] = useKeenSlider<HTMLDivElement>({
     dragSpeed: 0.5,

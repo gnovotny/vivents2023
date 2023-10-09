@@ -15,11 +15,14 @@ const Primary = ({ pageProps, children }: PrimaryProps) => {
   const isHome = useIsHome()
   return (
     <section
-      className={clsx('relative flex flex-col justify-between w-full max-w-lg lg:h-full p-container', {
-        '-lg:h-auto': isHome,
+      className={clsx('relative flex flex-col justify-between w-full max-w-lg lg:h-full p-common', {
+        '-lg:h-auto -lg:pb-0': isHome,
       })}
     >
-      <Header pageProps={pageProps} />
+      <Header
+        className='pb-6'
+        pageProps={pageProps}
+      />
       <Main
         className='flex-grow'
         pageProps={pageProps}

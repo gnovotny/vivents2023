@@ -17,10 +17,12 @@ const Bg = () => {
         }
       )}
     >
-      <div className='relative h-full w-ful'>
+      <div className='relative h-full w-full'>
         <video
           ref={loopVideoRef}
+          // className='absolute left-0 bottom-0 lg:top-0 lg:object-cover lg:object-center w-full lg:h-full'
           className='absolute inset-0 object-cover object-center w-full h-full'
+          // className='absolute left-0 bottom-0 lg:top-0 object-cover object-center w-full lg:w-full lg:h-full'
           preload='auto'
           muted
           loop

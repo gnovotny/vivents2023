@@ -3,13 +3,14 @@ import React, { FC, PropsWithChildren, useEffect } from 'react'
 import clsx from 'clsx'
 import { AppProps } from 'next/app'
 
+import Signup from '@/components/common/signup'
+import { useTimeout } from '@/lib/hooks'
+import { useStore } from '@/lib/store'
+
 import Bg from './bg'
 import Blur from './blur'
 import Primary from './sections/primary'
 import Secondary from './sections/secondary'
-import { useStore } from '@/lib/store'
-import Signup from '@/components/common/signup'
-import { useTimeout } from '@/lib/hooks'
 
 type LayoutProps = {
   pageProps: AppProps['pageProps']
@@ -18,9 +19,7 @@ type LayoutProps = {
 const SignupUI: FC = () => {
   const { displaySignup, closeSignup, openSignup } = useStore()
 
-  useEffect(() => {
-
-  }, [])
+  useEffect(() => {}, [])
 
   const open = () => openSignup()
 
@@ -44,9 +43,9 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, pageProps }) => 
         )}
       >
         <Bg />
+        <Blur />
         <Primary pageProps={pageProps}>{children}</Primary>
         <Secondary pageProps={pageProps} />
-        <Blur />
       </div>
       <SignupUI />
     </>

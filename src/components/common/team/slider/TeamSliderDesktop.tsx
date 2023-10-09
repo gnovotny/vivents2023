@@ -1,22 +1,16 @@
 import React, { FC, PropsWithChildren } from 'react'
 
 import cn from 'clsx'
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { m } from 'framer-motion'
 
 import { CustomSliderProps } from './TeamSlider'
 import s from './TeamSlider.module.css'
 
 const TeamSliderRow: FC<PropsWithChildren> = ({ children }) => {
-  const [topRef, topInView] = useInView({ triggerOnce: true, threshold: 1 })
 
   return (
     <>
-      <div
-        className='absolute inset-0 w-full h-[3rem]'
-        ref={topRef}
-      />
-      <motion.div
+      <m.div
         className={s.sliderRow}
         variants={{
           visible: {
@@ -35,10 +29,10 @@ const TeamSliderRow: FC<PropsWithChildren> = ({ children }) => {
           },
         }}
         initial={'hidden'}
-        animate={topInView ? 'visible' : 'hidden'}
+        animate={'visible'}
       >
         {children}
-      </motion.div>
+      </m.div>
     </>
   )
 }

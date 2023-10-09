@@ -6,6 +6,8 @@ export const INFO = {
   tel: '044 760 30 10',
   email: 'info@vivents.com',
   instagramUrl: 'https://www.instagram.com/vivents',
+  discordUrl: 'https://www.discord.com/vivents',
+  linkedinUrl: 'https://www.linkedin.com/vivents',
 }
 
 export const CANONICAL_URL = 'https://vivents.com'

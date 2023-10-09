@@ -5,23 +5,109 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
-      <change afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/signup/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/blur/Blur.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/blur/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/hooks/useTimeout.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/drawer/index2.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/drawer/index3.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/data.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/header/assets/discord.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/header/assets/insta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/header/assets/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/swipe-gallery.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/title.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/fonts/cousine/Cousine-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/fonts/cousine/Cousine-Regular.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/intro-prose/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/intro-prose/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/eurostile/EurostileExtBla.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/eurostile/EurostileExtBla.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/eurostile/EurostileExtMed.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/eurostile/EurostileExtMed.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/eurostile/EurostileExtReg.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/eurostile/EurostileExtReg.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/chat-content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/chat-menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/discord.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/discordText.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/discover-content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/discover-menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/estee-lauder-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/estee-lauder-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/estee-right-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/fabrizio-profile.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/iphone-frame-chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/iphone-frame-discover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/iphone-frame-shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/iphone-frame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/join.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/join.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/m124300-0001.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/shop-content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/shop-menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/og-square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/adam.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/adam.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/caro.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/caro.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/carolin-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/carolin-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/claudia-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/claudia-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/claudia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/claudia.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/gabriel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/gabriel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/georgie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/georgie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/gez.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/gez.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/ilija.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/ilija.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/jacco.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/jacco.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/jaco.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/jaco.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/jonathan-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/jonathan-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/joseph-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/joseph-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/joseph.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/joseph.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/kamiar-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/kamiar-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/kamiar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/kamiar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/levi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/levi.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/linus-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/linus-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/linus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/linus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/marc-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/marc-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/mario-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/mario-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/mario.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/mario.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/melanie.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/melanie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/michael.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/michael.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/michelle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/michelle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/nadine-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/nadine-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/nadine.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/nadine.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/rashid-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/rashid-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/rashid.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/rashid.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/richard.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/richard.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/sarah-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/sarah-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/sarah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/sarah.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/sophie-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/sophie-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/sophie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/sophie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/stefan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/stefan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/tobias-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/tobias-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/tobias.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/tobias.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/walid-estee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/walid-estee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/walid.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/assets/walid.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/map/Map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/map/Map.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/map/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/map/consts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/map/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/map/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/Team.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/team/card/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/card/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/team/members.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/team/slider/TeamSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/slider/TeamSlider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/team/slider/TeamSliderDesktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/slider/TeamSliderDesktop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/team/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/logo/ViventsLogoLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icons/logo/ViventsLogoLink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/blur/Blur.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/blur/Blur.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/sections/primary/Primary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/sections/primary/Primary.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/hooks/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/hooks/useSize.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/hooks/useSize.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/clients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/clients.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/company.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/company.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
@@ -59,7 +145,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/common",
+    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/ui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,13 +158,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/ui" />
+      <recent name="$PROJECT_DIR$/src/components/icons" />
       <recent name="$PROJECT_DIR$/src/components/common" />
-      <recent name="$PROJECT_DIR$/src/lib" />
-      <recent name="$PROJECT_DIR$/src/components/layout" />
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/common/team" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/layout/header/assets" />
       <recent name="$PROJECT_DIR$/src/pages" />
     </key>
   </component>
@@ -115,7 +202,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696771278748</updated>
       <workItem from="1696771280385" duration="20560000" />
-      <workItem from="1696834532074" duration="4659000" />
+      <workItem from="1696834532074" duration="18183000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -125,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696793657348</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="l">
+      <option name="closed" value="true" />
+      <created>1696839347977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696839347977</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

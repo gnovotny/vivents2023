@@ -23,6 +23,7 @@
     "clsx": "^1.2.1",
     "framer-motion": "^10.12.16",
     "gsap": "./src/lib/gsap/gsap-bonus.tgz",
+    "keen-slider": "^6.8.6",
     "next": "^13.4.5",
     "next-seo": "^6.0.0",
     "next-sitemap": "^4.1.3",
