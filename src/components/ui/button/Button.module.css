@@ -3,13 +3,13 @@
   h-12 px-0 py-0 leading-none transition-all ease-in-out duration-500
   text-center justify-center
   items-center text-[0.7rem]
-  tracking-wide border border-primary rounded-lg
-  font-black shadow-[none] outline-none
-  backdrop-blur bg-white/30;
+  tracking-wide  rounded-xl
+   shadow-[none] outline-none
+  backdrop-blur bg-tertiary;
 }
 
 .root:hover {
-  @apply md:bg-white md:text-[#C28A9E];
+  @apply opacity-80;
 }
 
 .root:focus {

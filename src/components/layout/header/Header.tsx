@@ -60,7 +60,7 @@ const Header = ({ pageProps, className }: HeaderProps) => {
         ))}
       </nav>
       <section
-        className={clsx('flex flex-row justify-between pt-8 lg:hidden', {
+        className={clsx('flex flex-row justify-between items-center pt-8 lg:hidden', {
           hidden: isHome,
         })}
       >
