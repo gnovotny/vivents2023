@@ -10,11 +10,12 @@ import useMeasure from 'react-use-measure'
 import ArrowSVG from '@/components/icons/arrow-left.svg'
 import Link, { LinkProps } from '@/components/ui/link'
 import { INFO } from '@/config'
-import { useIsHome } from '@/lib/hooks'
+import { useIsHome, useMediaQuery } from '@/lib/hooks'
 
 import discord from './assets/discord.png'
 import insta from './assets/insta.png'
 import linkedin from './assets/linkedin.png'
+import { down } from '@/lib/utils'
 
 type HeaderProps = {
   className?: string
@@ -47,12 +48,15 @@ const Header = ({ pageProps, className }: HeaderProps) => {
   const pathname = usePathname()
   const isHome = useIsHome()
   const [headerRef, { height: headerHeight }] = useMeasure()
+  const isSmall = useMediaQuery(down('lg'))
+
+  const headerStyle = isSmall ? { height: headerHeight > 0 ? headerHeight : undefined } : undefined
 
   return (
     <header
-      className={clsx('relative w-full transition-[height] duration-700', className)}
+      className={clsx('relative w-full transition-[height] duration-700 lg:pb-10', className)}
       // style={{ maxHeight: headerHeight ?? undefined, minHeight: headerHeight ?? undefined}}
-      style={{ height: headerHeight > 0 ? headerHeight : undefined }}
+      style={headerStyle}
     >
       <div
         ref={headerRef}

@@ -9,14 +9,14 @@ import Title from '@/components/ui/title'
 import { useMediaQuery } from '@/lib/hooks'
 import { down } from '@/lib/utils'
 
-import { Member, members } from './data'
+import { Member, members, coreMembers, advisors, artAdvisors } from './data'
 
 function renderGroup(group: string) {
   switch (group) {
     case 'advisors':
-      return 'Advisors'
+      return 'Advisory Board'
     case 'artAdvisors':
-      return 'Art Advisors'
+      return 'Art Advisory Board'
     case 'core':
     default:
       return 'Core Team'
@@ -26,21 +26,56 @@ function renderGroup(group: string) {
 function MemberLabel({
   member,
   className,
-  sliderDisabled = true,
+  withGroup = false,
+  active,
 }: {
   member: Member
-  active?: boolean
   className?: string
-  isInteractive?: boolean
-  sliderDisabled?: boolean
+  withGroup?: boolean
+  active?: boolean
 }) {
   return (
-    <div className={clsx('relative block w-full pb-4 pt-10', className)}>
+    <div className={clsx('relative block w-full pb-4 pt-10 lg:py-0', className)}>
       <div className={clsx('relative flex flex-col gap-1')}>
-        <Title>{renderGroup(member.group)}</Title>
-        <div>
-          <Text>{member.name}</Text>
-          <Text className='text-xs'>{member.position}</Text>
+        {withGroup && <Title>{renderGroup(member.group)}</Title>}
+        <div className='flex flex-col lg:flex-row lg:items-end lg:gap-2'>
+          <Text className='!leading-none'>{member.name}</Text>
+          <Text className='text-xs lg:text-[0.65rem] !leading-none lg:pb-[0.175em]'>{member.position}</Text>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function MemberGroup({
+  id,
+  members,
+  className,
+  active,
+}: {
+  id: string
+  members: Member[]
+  className?: string
+  active?: Member
+}) {
+  return (
+    <div className={clsx('relative block w-full', className)}>
+      <div className={clsx('relative flex flex-col gap-2')}>
+        <Title>{renderGroup(id)}</Title>
+        <div className='relative flex flex-col gap-1'>
+          {members.map((member, index) => (
+            <button
+              key={`member-{${index}`}
+              className={clsx({
+                'font-bold': active?.name === member.name,
+              })}
+            >
+              <MemberLabel
+                member={member}
+                active={active?.name === member.name}
+              />
+            </button>
+          ))}
         </div>
       </div>
     </div>
@@ -133,11 +168,17 @@ export default function Team({ className }: { className?: string }) {
           }, 3000)
         }
         slider.on('created', () => {
-          slider.container.addEventListener('mouseover', () => {
+          console.log(sliderContainerRef.current)
+          console.log(slider.container.parentElement)
+          // slider.container.addEventListener('mouseover', () => {
+          // sliderContainerRef.current?.addEventListener('mouseover', () => {
+          slider.container.parentElement?.addEventListener('mouseover', () => {
             mouseOver = true
             clearNextTimeout()
           })
-          slider.container.addEventListener('mouseout', () => {
+          // slider.container.addEventListener('mouseout', () => {
+          // sliderContainerRef.current?.addEventListener('mouseout', () => {
+          slider.container.parentElement?.addEventListener('mouseout', () => {
             mouseOver = false
             nextTimeout()
           })
@@ -184,11 +225,14 @@ export default function Team({ className }: { className?: string }) {
   }, [slider])
 
   return (
-    <section className={clsx('flex h-full flex-grow flex-col', className)}>
+    <section
+      ref={sliderContainerRef}
+      className={clsx('flex h-full flex-grow flex-col', className)}
+    >
       <div
         ref={sliderRef}
         className={clsx(
-          'keen-slider relative flex h-full lg:h-auto lg:aspect-square w-full flex-grow lg:flex-grow-0 overflow-hidden -lg:full-w-common'
+          'keen-slider relative flex h-full lg:h-auto lg:aspect-square w-full lg:w-3/5 flex-grow lg:flex-grow-0 overflow-hidden -lg:full-w-common'
         )}
       >
         {members.map((member, index) => (
@@ -201,10 +245,10 @@ export default function Team({ className }: { className?: string }) {
           />
         ))}
       </div>
-      <MemberLabel
-        member={members[currentSlide]}
-        sliderDisabled={sliderDisabled}
-      />
+
+      <div className='lg:hidden'>
+        <MemberLabel member={members[currentSlide]} />
+      </div>
 
       {/*<SwiperNumbers*/}
       {/*  className='p-4 -lg:hidden'*/}
@@ -212,6 +256,23 @@ export default function Team({ className }: { className?: string }) {
       {/*  activeIndex={currentSlide}*/}
       {/*  setCurrentSlide={(slide: number) => slider.current?.moveToIdx(slide)}*/}
       {/*/>*/}
+      <div className='flex-col hidden pt-10 lg:flex gap-6'>
+        <MemberGroup
+          id='core'
+          members={coreMembers}
+          active={members[currentSlide]}
+        />
+        <MemberGroup
+          id='advisors'
+          members={advisors}
+          active={members[currentSlide]}
+        />
+        <MemberGroup
+          id='artAdvisors'
+          members={artAdvisors}
+          active={members[currentSlide]}
+        />
+      </div>
     </section>
   )
 }
