@@ -86,15 +86,15 @@ const Signup: FC<MenuProps> = ({ open, onClose }) => {
               placeholder='YOUR@EMAIL.COM'
               required
               //
-              className='block w-full p-4 text-sm uppercase bg-transparent border !h-12 rounded-xl border-primary focus:border-primary focus:ring-primary focus-visible:outline-tertiary'
+              className='block w-full p-2 lg:p-4 text-xs lg:text-sm uppercase bg-transparent border !h-8 lg:!h-12 rounded-lg lg:rounded-xl border-primary focus:border-primary focus:ring-primary focus-visible:outline-tertiary'
               {...methods.register('email', {
                 required: 'This field is required',
               })}
             />
           </div>
           <div>
-            <Button type='submit' className='pl-10 pr-6 min-w-[6rem] rounded-xl !h-12 !text-base'>
-              send <ArrowSVG className='inline-block w-3 h-auto ml-3' />
+            <Button type='submit' className='pl-5 pr-3 lg:pl-10 lg:pr-6 lg:min-w-[6rem] rounded-lg lg:rounded-xl !h-8 lg:!h-12 !text-xs lg:!text-base'>
+              send <ArrowSVG className='inline-block w-3 lg:w-3 h-auto ml-1 lg:ml-3' />
             </Button>
           </div>
         </div>

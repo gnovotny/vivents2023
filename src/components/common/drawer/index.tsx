@@ -27,10 +27,10 @@ export default function Drawer({ title = '', description = '', children, isOpen,
           <div className='flex w-full lg:max-w-2xl'>
             <Transition.Child
               as={Fragment}
-              enter='transform transition ease-in-out duration-500 sm:duration-500'
+              enter='transform transition ease-in-out duration-700 '
               enterFrom='opacity-0 -lg:translate-y-full'
               enterTo='opacity-100 -lg:translate-y-0'
-              leave='transform transition ease-in-out duration-500 sm:duration-500'
+              leave='transform transition ease-in-out duration-700'
               leaveFrom='opacity-100 -lg:translate-y-0'
               leaveTo='opacity-0 -lg:translate-y-full'
             >
@@ -56,8 +56,8 @@ export default function Drawer({ title = '', description = '', children, isOpen,
                       </div>
                     </div>
                   </div>
-                  <div className='flex flex-col min-h-0 px-4 pb-4 lg:px-14 lg:pb-10'>
-                    <Dialog.Title className='text-[0.8rem] uppercase leading-[1.1] lg:max-w-xs'>{title}</Dialog.Title>
+                  <div className='flex flex-col min-h-0 px-8 pb-8 lg:px-14 lg:pb-10'>
+                    <Dialog.Title className='text-xs lg:text-[0.8rem] uppercase leading-[1.2] lg:leading-[1.1] max-w-[70%] lg:max-w-xs'>{title}</Dialog.Title>
                     <div className='relative flex-1'>{children}</div>
                   </div>
                   {/*<div className='flex flex-shrink-0 justify-end px-4 py-4'>*/}

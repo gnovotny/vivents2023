@@ -19,11 +19,7 @@ type LayoutProps = {
 const SignupUI: FC = () => {
   const { displaySignup, closeSignup, openSignup } = useStore()
 
-  useEffect(() => {}, [])
-
-  const open = () => openSignup()
-
-  useTimeout(open, 0)
+  useTimeout(openSignup, 1500)
 
   return (
     <Signup
