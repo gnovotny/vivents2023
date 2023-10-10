@@ -10,11 +10,21 @@ interface ContactButtonProps {
   className?: string
 }
 
-const ContactButton: FunctionComponent<ContactButtonProps> = ({ className }) => {
+export const ContactButton: FunctionComponent<ContactButtonProps> = ({ className }) => {
   return (
     <Link href='/contact'>
       <Button className={clsx('px-5', className)}>
         Contact <ArrowSVG className='inline-block w-4 h-auto pl-1' />
+      </Button>
+    </Link>
+  )
+}
+
+export const ContactButtonVariant: FunctionComponent<ContactButtonProps> = ({ className }) => {
+  return (
+    <Link href='/contact'>
+      <Button className={clsx('px-5 !w-full !h-9 !text-sm !leading-none', className)}>
+        Contact
       </Button>
     </Link>
   )
