@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-const AT_TOKEN = 'pat4vIHOUYEZkS3CI.42b8b934208d1495bd9aa55642d4833d6a091bf0b12b9689d66bc67fa94e5bdd'
-const AT_BASE_ID = 'appdkHMUd2frNhhFP'
+const AT_TOKEN = 'patYqWa22eBTu3iww.9a6cbe46a675a7683ac0e3e39ef04fdb07ae32f4e0ad99dc59db3e052d694372'
+const AT_BASE_ID = 'appRwV7irUi1MjPGe'
 
 import Airtable from 'airtable'
 
@@ -14,9 +14,9 @@ const createSubscription = (data: any) => {
     const base = new Airtable().base(AT_BASE_ID)
     base('Subscriptions').create(
       {
-        Status: 'Subscribed',
+        Subscribed: true,
         Email: data['email'],
-        Name: data['name'],
+        // Name: data['name'],
       },
       function (err: any, records: any) {
         if (err) {

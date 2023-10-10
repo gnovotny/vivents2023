@@ -3,7 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://lesmuses.lalique.com
-
-# Sitemaps
-Sitemap: https://lesmuses.lalique.com/sitemap.xml
+Host: https://www.vivents.com

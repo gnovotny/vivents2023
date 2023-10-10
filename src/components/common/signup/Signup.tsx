@@ -12,7 +12,7 @@ type SignupProps = {
 }
 
 const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
-  const methods = useForm()
+  const { handleSubmit, register, getValues } = useForm()
 
   const [isJoining, setIsJoining] = useState(false)
   const [isJoined, setIsJoined] = useState(false)
@@ -25,34 +25,34 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
 
       if (isValid) {
         setIsJoining(true)
-        // await fetch('/api/signup', {
-        //   method: 'POST',
-        //   body: JSON.stringify({
-        //     ...getValues(),
-        //   }),
-        //   headers: {
-        //     'content-type': 'application/json',
-        //   },
-        // })
-        //   // await timeout(500)
-        //   .then((response) => {
-        //     const data = response.json()
-        //     if (response.ok) {
-        //       return data
-        //     }
-        //     throw new Error('Something went wrong')
-        //   })
-        //   .then((res) => {
-        //     setIsJoining(false)
-        //   })
-        //   .catch((e) => {
-        //     console.log(e)
-        //     throw new Error(e.toString())
-        //   })
+        await fetch('/api/signup', {
+          method: 'POST',
+          body: JSON.stringify({
+            ...getValues(),
+          }),
+          headers: {
+            'content-type': 'application/json',
+          },
+        })
+          // await timeout(500)
+          .then((response) => {
+            const data = response.json()
+            if (response.ok) {
+              return data
+            }
+            throw new Error('Something went wrong')
+          })
+          .then((res) => {
+            setIsJoining(false)
+            setIsJoined(true)
+            parentOnSubmit?.()
+          })
+          .catch((e) => {
+            console.log(e)
+            throw new Error(e.toString())
+          })
 
-        setIsJoining(false)
-        setIsJoined(true)
-        parentOnSubmit?.()
+
       }
     } catch (e) {
       // setMessageIsOpen(true)
@@ -61,7 +61,7 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
   }
 
   return (
-    <form onSubmit={methods.handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className={clsx('flex flex-row justify-end items-end h-full gap-3', className)}>
         {/*<label
             htmlFor='email'
@@ -82,7 +82,7 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
               hidden: isJoined,
             }
           )}
-          {...methods.register('email', {
+          {...register('email', {
             required: 'This field is required',
           })}
         />
