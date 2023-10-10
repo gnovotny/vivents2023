@@ -8,8 +8,8 @@ type DrawerProps = {
   title?: string
   description?: string
   children: ReactNode
-  isOpen: boolean
-  onClose: Dispatch<SetStateAction<boolean>>
+  isOpen?: boolean
+  onClose: () => void
 }
 
 export default function Drawer({ title = '', description = '', children, isOpen, onClose }: DrawerProps) {
@@ -24,7 +24,7 @@ export default function Drawer({ title = '', description = '', children, isOpen,
         onClose={onClose}
       >
         <Dialog.Overlay className='relative flex flex-col justify-end w-full h-full lg:justify-center lg:items-center'>
-          <div className='flex w-full lg:w-auto'>
+          <div className='flex w-full lg:max-w-2xl'>
             <Transition.Child
               as={Fragment}
               enter='transform transition ease-in-out duration-500 sm:duration-500'
@@ -36,16 +36,16 @@ export default function Drawer({ title = '', description = '', children, isOpen,
             >
               <div className='w-full'>
                 <div className='flex flex-col h-full bg-white shadow-xl'>
-                  <div className='p-4 lg:px-6 lg:py-0 lg:pt-[8rem]'>
+                  <div className='px-4 pt-4 lg:pt-6 lg:px-6'>
                     <div className='flex items-start justify-between'>
                       <div>
-                        <Dialog.Title className='text-sm uppercase leading-[1.05]'>{title}</Dialog.Title>
+
                       </div>
                       <div className=''>
                         <button
                           type='button'
                           className='bg-none text-primary focus:outline-none focus:ring-transparent'
-                          onClick={() => onClose(false)}
+                          onClick={() => onClose()}
                         >
                           <span className='sr-only'>Close panel</span>
                           <XSVG
@@ -56,8 +56,9 @@ export default function Drawer({ title = '', description = '', children, isOpen,
                       </div>
                     </div>
                   </div>
-                  <div className='flex flex-col flex-1 min-h-0 overflow-y-auto'>
-                    <div className='relative flex-1 p-4 lg:mt-6 lg:px-16 lg:pb-4 lg:pt-0'>{children}</div>
+                  <div className='flex flex-col min-h-0 px-4 pb-4 lg:px-14 lg:pb-10'>
+                    <Dialog.Title className='text-[0.8rem] uppercase leading-[1.1] lg:max-w-xs'>{title}</Dialog.Title>
+                    <div className='relative flex-1'>{children}</div>
                   </div>
                   {/*<div className='flex flex-shrink-0 justify-end px-4 py-4'>*/}
                   {/*  <button*/}

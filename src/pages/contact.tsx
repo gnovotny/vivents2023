@@ -125,8 +125,11 @@ const ContactPage = ({ pageProps }: AppProps) => {
               </NextLink>
             </div>
             <div className='flex flex-col gap-1'>
-              <Link href='/imprint'>
-                <Title>Imprint</Title>
+              <Link
+                href='/imprint'
+                className='group'
+              >
+                <Title className='group-hover:text-primary transition-colors duration-300'>Imprint</Title>
               </Link>
             </div>
           </div>

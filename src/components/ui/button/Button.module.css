@@ -5,7 +5,7 @@
   items-center text-[0.7rem]
   tracking-wide  rounded-xl
    shadow-[none] outline-none
-  backdrop-blur bg-tertiary;
+  backdrop-blur !bg-tertiary;
 }
 
 .root:hover {
