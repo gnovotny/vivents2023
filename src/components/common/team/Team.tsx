@@ -35,10 +35,10 @@ function MemberLabel({
   active?: boolean
 }) {
   return (
-    <div className={clsx('relative block w-full pb-4 pt-10 lg:py-0', className)}>
-      <div className={clsx('relative flex flex-col gap-1')}>
+    <div className={clsx('block w-full pb-4 pt-10 lg:py-0', className)}>
+      <div className={clsx('flex flex-col gap-1')}>
         {withGroup && <Title>{renderGroup(member.group)}</Title>}
-        <div className='flex flex-col lg:flex-row lg:items-end lg:gap-2'>
+        <div className='flex flex-col gap-1 lg:flex-row lg:items-end lg:gap-2'>
           <Text className='!leading-none'>{member.name}</Text>
           <Text className='text-xs lg:text-[0.65rem] !leading-none lg:pb-[0.175em]'>{member.position}</Text>
         </div>
@@ -50,13 +50,17 @@ function MemberLabel({
 function MemberGroup({
   id,
   members,
+  allMembers,
   className,
   active,
+  setCurrentSlide,
 }: {
   id: string
   members: Member[]
+  allMembers: Member[]
   className?: string
   active?: Member
+  setCurrentSlide: (slide: number) => void
 }) {
   return (
     <div className={clsx('relative block w-full', className)}>
@@ -65,8 +69,16 @@ function MemberGroup({
         <div className='relative flex flex-col gap-1'>
           {members.map((member, index) => (
             <button
+              onMouseOver={() => {
+                const index = allMembers.findIndex((v) => v.name === member.name)
+                setCurrentSlide(index)
+              }}
+              onClick={() => {
+                const index = allMembers.findIndex((v) => v.name === member.name)
+                setCurrentSlide(index)
+              }}
               key={`member-{${index}`}
-              className={clsx({
+              className={clsx('block relative z-10', {
                 'font-bold': active?.name === member.name,
               })}
             >
@@ -168,8 +180,6 @@ export default function Team({ className }: { className?: string }) {
           }, 3000)
         }
         slider.on('created', () => {
-          console.log(sliderContainerRef.current)
-          console.log(slider.container.parentElement)
           // slider.container.addEventListener('mouseover', () => {
           // sliderContainerRef.current?.addEventListener('mouseover', () => {
           slider.container.parentElement?.addEventListener('mouseover', () => {
@@ -260,17 +270,23 @@ export default function Team({ className }: { className?: string }) {
         <MemberGroup
           id='core'
           members={coreMembers}
+          allMembers={members}
           active={members[currentSlide]}
+          setCurrentSlide={(slide: number) => slider.current?.moveToIdx(slide)}
         />
         <MemberGroup
           id='advisors'
           members={advisors}
+          allMembers={members}
           active={members[currentSlide]}
+          setCurrentSlide={(slide: number) => slider.current?.moveToIdx(slide)}
         />
         <MemberGroup
           id='artAdvisors'
           members={artAdvisors}
+          allMembers={members}
           active={members[currentSlide]}
+          setCurrentSlide={(slide: number) => slider.current?.moveToIdx(slide)}
         />
       </div>
     </section>
