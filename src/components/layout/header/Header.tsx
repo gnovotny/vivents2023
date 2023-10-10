@@ -47,19 +47,19 @@ const NavItem = ({ children, className, isActive, ...props }: LinkProps) => (
 const Header = ({ pageProps, className }: HeaderProps) => {
   const pathname = usePathname()
   const isHome = useIsHome()
-  const [headerRef, { height: headerHeight }] = useMeasure()
-  const isSmall = useMediaQuery(down('lg'))
+  // const [headerRef, { height: headerHeight }] = useMeasure()
+  // const isSmall = useMediaQuery(down('lg'))
 
-  const headerStyle = isSmall ? { height: headerHeight > 0 ? headerHeight : undefined } : undefined
+  // const headerStyle = isSmall ? { height: headerHeight > 0 ? headerHeight : undefined } : undefined
 
   return (
     <header
-      className={clsx('relative w-full transition-[height] duration-700 lg:pb-10', className)}
-      // style={{ maxHeight: headerHeight ?? undefined, minHeight: headerHeight ?? undefined}}
-      style={headerStyle}
+      // className={clsx('relative w-full transition-[height] duration-700 lg:pb-10', className)}
+      // style={headerStyle}
+      className={clsx('relative w-full lg:pb-10', className)}
     >
       <div
-        ref={headerRef}
+        // ref={headerRef}
         className='w-full'
       >
         {/*-mt-2 -ml-4 lg:-mt-3 w-[calc(100%+2rem)]*/}

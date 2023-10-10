@@ -12,9 +12,7 @@ type MainProps = PropsWithChildren<{
 
 const Main = ({ children, className }: MainProps) => {
   return (
-    <main
-      className={cn('relative w-full', className)}
-    >
+    <main className={cn('relative w-full', className)}>
       <PageTransitionStack
         customClassName='w-full h-full'
         customInactiveClassName='inset-0'

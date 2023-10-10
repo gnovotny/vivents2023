@@ -10,8 +10,8 @@ const IndexPage = ({ pageProps }: AppProps) => {
   const { introComplete } = useStore()
   return (
     <div
-      className={clsx('lg:hidden opacity-0 transition-opacity duration-1000 -mt-12', {
-        '!opacity-100': introComplete,
+      className={clsx('lg:hidden !opacity-100 transition-opacity duration-1000 -mt-12', {
+        // '!opacity-0': !introComplete, // TODO
       })}
     >
       <IntroProse />

@@ -13,16 +13,15 @@ type PrimaryProps = PropsWithChildren<{
 }>
 
 const Primary = ({ pageProps, children }: PrimaryProps) => {
-  const isHome = useIsHome()
-  const { introComplete } = useStore()
+  // const isHome = useIsHome()
+  // const { introComplete } = useStore()
 
   return (
     <section
       className={clsx(
         'primary relative flex flex-col justify-between w-full max-w-lg h-full p-common opacity-100 transition-opacity duration-1000 delay-500',
         {
-          // '-lg:h-auto -lg:pb-0': isHome,
-          '!opacity-0': isHome && !introComplete,
+          // '!opacity-0': isHome && !introComplete,
         }
       )}
     >

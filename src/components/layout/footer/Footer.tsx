@@ -29,7 +29,7 @@ const Footer = ({ pageProps }: HeaderProps) => {
         className={clsx(
           'leading-none !text-[0.55rem] lg:!text-xs opacity-100 transition-opacity duration-1000 delay-500',
           {
-            '!opacity-0': isHome && !introComplete,
+            // 'lg:!opacity-0': !introComplete, // TODO
           }
         )}
       >

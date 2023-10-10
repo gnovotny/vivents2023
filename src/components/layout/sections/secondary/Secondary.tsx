@@ -25,9 +25,9 @@ const Secondary = ({ pageProps, children }: PrimaryProps) => {
       )}
     >
       <div
-        className={clsx('lg:pb-10 hidden lg:block opacity-0 transition-opacity duration-1000', {
+        className={clsx('lg:pb-10 hidden lg:block opacity-100 transition-opacity duration-1000', {
           // 'hidden lg:block': !isHome,
-          '!opacity-100': introComplete,
+          // '!opacity-0': !introComplete, // TODO
         })}
       >
         <IntroProse />
