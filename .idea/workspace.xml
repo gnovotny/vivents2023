@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
-      <change afterPath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/app/apple-store.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/app/apple-store.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/app/google-store.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/app/google-store.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/clients/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/Team.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +102,7 @@
       <updated>1696771278748</updated>
       <workItem from="1696771280385" duration="20560000" />
       <workItem from="1696834532074" duration="32140000" />
-      <workItem from="1696931496407" duration="27270000" />
+      <workItem from="1696931496407" duration="27480000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -285,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696961732444</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="l">
+      <option name="closed" value="true" />
+      <created>1696962505035</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1696962505035</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

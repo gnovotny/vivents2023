@@ -125,7 +125,7 @@ function MemberSlide({
           src={member.image.src}
           alt={member.image.alt ?? member.name}
           className={clsx(
-            'relative h-full w-full object-cover',
+            'relative h-full w-full object-cover lg:object-top',
             {
               'transition duration-300 ease-in-out group-hover:scale-105': isInteractive,
             },
