@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
-      <change afterPath="$PROJECT_DIR$/src/components/common/signup/SignupDrawer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/ADAM 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/AUDREY 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/CLAUDIA 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/DIMITRI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/GABE 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/ILIJA 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/JACCO 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/LEVY 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/LINUS 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/MICHAEL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/MICHELE 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/NADINE 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/SARAH 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/SCHÄLI 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/SOPHIE 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/STEFAN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/TOBIAS 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/WALID 1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/map/Map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/map/Map.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/signup/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +100,7 @@
       <updated>1696771278748</updated>
       <workItem from="1696771280385" duration="20560000" />
       <workItem from="1696834532074" duration="32140000" />
-      <workItem from="1696931496407" duration="5636000" />
+      <workItem from="1696931496407" duration="6084000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -206,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696935779961</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="l">
+      <option name="closed" value="true" />
+      <created>1696937263502</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696937263502</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
