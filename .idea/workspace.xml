@@ -5,31 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
+      <change afterPath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/apple-store.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/app/apple-store.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/app/google-store.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/app/google-store.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/clients/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/clients/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/contact-button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/contact-button/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/intro-prose/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/intro-prose/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icons/logo/ViventsLogoLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icons/logo/ViventsLogoLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.old.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/Bg.old.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/sections/primary/Primary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/sections/primary/Primary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button/Button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/text.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/clients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/clients.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/base.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/common/team",
+    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/common/clients/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,11 +59,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/clients/assets" />
+      <recent name="$PROJECT_DIR$/public/images/app" />
       <recent name="$PROJECT_DIR$/src/components/common/team" />
       <recent name="$PROJECT_DIR$/src/components/layout/bg" />
       <recent name="$PROJECT_DIR$/src/components/common/signup" />
-      <recent name="$PROJECT_DIR$/src/components/common/team/assets" />
-      <recent name="$PROJECT_DIR$/src/components/common/contact-button" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/common/team/assets" />
@@ -125,7 +107,7 @@
       <updated>1696771278748</updated>
       <workItem from="1696771280385" duration="20560000" />
       <workItem from="1696834532074" duration="32140000" />
-      <workItem from="1696931496407" duration="26506000" />
+      <workItem from="1696931496407" duration="27270000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -295,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696950646939</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="l">
+      <option name="closed" value="true" />
+      <created>1696961732444</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1696961732444</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

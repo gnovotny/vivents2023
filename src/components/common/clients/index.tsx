@@ -1,8 +1,10 @@
 import clsx from 'clsx'
+import Image from 'next/image'
 
 import BuchererSVG from './assets/bucherer.svg'
 import HockeySVG from './assets/hockey.svg'
 import JeanRemySVG from './assets/jeanremy.svg'
+import LaliquePNG from './assets/lalique.png'
 import LaliqueSVG from './assets/lalique.svg'
 import PhiloroSVG from './assets/philoro.svg'
 
@@ -35,7 +37,7 @@ const CLIENTS = [
     name: 'Swiss Ice Hockey',
     // src: '/images/clients/hockey.svg',
     // SVG: HockeySVG,
-    svg: <HockeySVG className='w-12 h-auto' />,
+    svg: <HockeySVG className='w-12 h-auto lg:ml-8' />,
     text: <span className='uppercase text-[0.5rem] thinner'>Coming soon</span>,
   },
   {
@@ -66,7 +68,16 @@ const Client = ({ name, href, svg, text }: any) => (
       {/*  alt={name}*/}
       {/*/>*/}
       {/*<SVG />*/}
-      {svg}
+      {/*{svg}*/}
+      {name === 'Lalique' ? (
+        <Image
+          src={LaliquePNG}
+          alt={'Lalique'}
+          className='w-24 h-auto'
+        />
+      ) : (
+        svg
+      )}
       <div className='text-right'>{text}</div>
     </div>
   </a>
