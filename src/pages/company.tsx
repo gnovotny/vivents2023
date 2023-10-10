@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app'
-import Team from '@/components/common/team'
+import Team from 'src/components/common/team'
 
 const CompanyPage = ({ pageProps }: AppProps) => {
   return (

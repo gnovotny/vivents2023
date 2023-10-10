@@ -3,19 +3,18 @@ import React, { ReactNode } from 'react'
 import { ImageProps } from 'next/image'
 
 import adam from './assets/adam.jpg'
+import audrey from './assets/audrey.jpg'
 import claudia from './assets/claudia.jpg'
+import dimitri from './assets/dimitri.jpg'
+import gabe from './assets/gabe.jpg'
 import ilija from './assets/ilija.jpg'
 import jacco from './assets/jacco.jpg'
-import gabriel from './assets/gabriel.jpg'
-import levi from './assets/levi.jpg'
+import levi from './assets/levy.jpg'
 import linus from './assets/linus.jpg'
-import gez from './assets/gez.png'
-import melanie from './assets/melanie.png'
 import michael from './assets/michael.jpg'
-import michelle from './assets/michelle.jpg'
+import michelle from './assets/michele.jpg'
 import nadine from './assets/nadine.jpg'
-import rachid from './assets/rashid.jpg'
-import richard from './assets/richard.jpg'
+import schaeli from './assets/schaeli.jpg'
 import sarah from './assets/sarah.jpg'
 import sophie from './assets/sophie.jpg'
 import gautschi from './assets/stefan.jpg'
@@ -23,34 +22,24 @@ import tobias from './assets/tobias.jpg'
 import walid from './assets/walid.jpg'
 
 export type Member = {
-  name?: ReactNode | string
+  name: string
   position?: ReactNode | string
-  image?: Omit<ImageProps, 'alt'>
+  image: Omit<ImageProps, 'alt'> & {
+    alt?: string
+  }
 }
 
 export const coreMembers: Member[] = [
   {
     name: 'Sarah Schlagenhauf',
-    position: (
-      <>
-        Chief Executive Officer
-        <br />
-        Co-Founder
-      </>
-    ),
+    position: <>CEO & CO-FOUNDER</>,
     image: {
       src: sarah,
     },
   },
   {
     name: 'Adam Mann',
-    position: (
-      <>
-        Chief Strategy Officer
-        <br />
-        Co-Founder
-      </>
-    ),
+    position: <>CSO & CO-FOUNDER</>,
     image: {
       src: adam,
       // objectPosition: '0% 50%',
@@ -58,7 +47,7 @@ export const coreMembers: Member[] = [
   },
   {
     name: 'Linus Inderbitzin',
-    position: 'Chief Technology Officer',
+    position: 'CTO',
     image: {
       src: linus,
     },
@@ -73,17 +62,25 @@ export const coreMembers: Member[] = [
   },
   {
     name: 'Walid El Barbir',
-    position: 'Designer',
+    position: 'Head of Design',
     image: {
       src: walid,
       // objectPosition: '50% 30%',
     },
   },
   {
-    name: 'Melanie Guenthardt',
-    position: 'Marketing & Liaison Director',
+    name: 'AUDREY RAPPOLD',
+    position: 'GRAPHIC DESIGN',
     image: {
-      src: melanie,
+      src: audrey,
+      // objectPosition: '50% 30%',
+    },
+  },
+  {
+    name: 'dimitri erhard',
+    position: 'MOTION & CGI DESIGN',
+    image: {
+      src: dimitri,
       // objectPosition: '50% 30%',
     },
   },
@@ -96,20 +93,12 @@ export const coreMembers: Member[] = [
     },
   },
   {
-    name: 'Gabriel Novotny',
-    position: 'Full Stack Dev',
+    name: 'Gabe Novotny',
+    position: 'Fullstack Developer',
     image: {
-      src: gabriel,
+      src: gabe,
     },
   },
-  {
-    name: 'Deniz Gez',
-    position: 'Brand Curator',
-    image: {
-      src: gez,
-    },
-  },
-
 ]
 export const advisors: Member[] = [
   {
@@ -123,9 +112,7 @@ export const advisors: Member[] = [
     name: 'Claudia Bolliger-Winkler',
     position: (
       <>
-        Scale-Up & AI Advisor
-        <br />
-        VR artdeal
+        VR,Scale-Up & AI Advisor
       </>
     ),
     image: {
@@ -143,9 +130,7 @@ export const advisors: Member[] = [
     name: 'Stefan Gautschi',
     position: (
       <>
-        CEO Apricum Circle AG
-        <br />
-        VR artdeal
+        VR, CEO Apricum Circle AG
       </>
     ),
     image: {
@@ -156,25 +141,11 @@ export const advisors: Member[] = [
     name: 'Richard Schäli',
     position: 'New Economy Advisor',
     image: {
-      src: richard,
+      src: schaeli,
     },
   },
 ]
 export const artAdvisors: Member[] = [
-  {
-    name: (
-      <>
-        HRH Shaikh Rashid bin Khalifa
-        <br />
-        Al Khalifa
-      </>
-    ),
-    position: 'Artist / Collector',
-    image: {
-      alt: 'Shaikh Rashid bin Khalifa',
-      src: rachid,
-    },
-  },
   {
     name: 'Sophie Neuendorf',
     position: 'VP Artnet',
@@ -204,3 +175,9 @@ export const artAdvisors: Member[] = [
     },
   },
 ]
+
+export const members = {
+  coreMembers,
+  advisors,
+  artAdvisors,
+}

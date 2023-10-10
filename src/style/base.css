@@ -123,6 +123,18 @@ h1, h2, h3, h4, h5, h6 {
     @apply pt-16;
   }
 }
+
+.-lg\:-mx-common {
+  @screen -lg {
+    @apply -mx-8;
+  }
+}
+
+.-lg\:full-w-common {
+  @screen -lg {
+    @apply !w-[calc(100%+4rem)] !-mx-8;
+  }
+}
 /*
 
 input:-internal-autofill-selected {
