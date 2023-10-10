@@ -3,7 +3,7 @@ import React, { FC, PropsWithChildren, useEffect } from 'react'
 import clsx from 'clsx'
 import { AppProps } from 'next/app'
 
-import Signup from '@/components/common/signup'
+import { SignupDrawer } from '@/components/common/signup'
 import { useTimeout } from '@/lib/hooks'
 import { useStore } from '@/lib/store'
 
@@ -22,7 +22,7 @@ const SignupUI: FC = () => {
   useTimeout(openSignup, 1500)
 
   return (
-    <Signup
+    <SignupDrawer
       open={displaySignup}
       onClose={closeSignup}
     />

@@ -5,11 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
+      <change afterPath="$PROJECT_DIR$/src/components/common/signup/SignupDrawer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/ADAM 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/AUDREY 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/CLAUDIA 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/DIMITRI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/GABE 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/ILIJA 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/JACCO 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/LEVY 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/LINUS 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/MICHAEL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/MICHELE 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/NADINE 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/SARAH 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/SCHÄLI 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/SOPHIE 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/STEFAN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/TOBIAS 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/team/assets/new/WALID 1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/map/Map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/map/Map.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/signup/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,30 +59,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/g/projects/artdeal/vivents2023/src/components/common/contact-button&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.css.dialects&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/g/projects/artdeal/vivents2023/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/common/signup",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.css.dialects",
+    "ts.external.directory.path": "/home/g/projects/artdeal/vivents2023/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/signup" />
+      <recent name="$PROJECT_DIR$/src/components/common/team/assets" />
       <recent name="$PROJECT_DIR$/src/components/common/contact-button" />
       <recent name="$PROJECT_DIR$/src/components/icons" />
       <recent name="$PROJECT_DIR$/src/components/common" />
-      <recent name="$PROJECT_DIR$/public/images/clients" />
-      <recent name="$PROJECT_DIR$/src/components/common/map" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages" />
@@ -103,7 +124,7 @@
       <updated>1696771278748</updated>
       <workItem from="1696771280385" duration="20560000" />
       <workItem from="1696834532074" duration="32140000" />
-      <workItem from="1696931496407" duration="4235000" />
+      <workItem from="1696931496407" duration="5636000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -177,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696934963921</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="l">
+      <option name="closed" value="true" />
+      <created>1696935779961</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696935779961</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

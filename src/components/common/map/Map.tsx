@@ -77,7 +77,8 @@ const Map = memo(({ onLoad: customOnLoad }: { onLoad?: (map: google.maps.Map) =>
         maxZoom: (screenMdDown ? ZOOM_SMALL : ZOOM_LARGE) + 3,
         styles: getMapStyles(),
         disableDefaultUI: true,
-        gestureHandling: screenMdDown ? 'none' : 'greedy',
+        // gestureHandling: screenMdDown ? 'none' : 'greedy',
+        gestureHandling: 'greedy',
         backgroundColor: '#FFFFFF',
         isFractionalZoomEnabled: true,
       }}

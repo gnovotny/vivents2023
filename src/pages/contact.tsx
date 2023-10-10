@@ -16,6 +16,7 @@ import Title from '@/components/ui/title'
 import { INFO } from '@/config'
 import { useMediaQuery, useSize } from '@/lib/hooks'
 import { down } from '@/lib/utils'
+import { Signup } from '@/components/common/signup'
 // import Map from '@/components/common/map'
 
 const Map = dynamic(() => import('@/components/common/map').then((m) => m.default), {
@@ -134,7 +135,10 @@ const ContactPage = ({ pageProps }: AppProps) => {
             </div>
           </div>
         </div>
-        <div>SIGNUP TODO</div>
+        <div className='flex flex-col gap-2'>
+          <Title>Newsletter</Title>
+          <Signup />
+        </div>
       </div>
     </div>
   )
