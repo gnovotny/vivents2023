@@ -6,9 +6,9 @@ export const INFO = {
   streetAddress2: '8004 Zürich',
   tel: '044 760 30 10',
   email: 'info@vivents.com',
-  instagramUrl: 'https://www.instagram.com/vivents',
-  discordUrl: 'https://www.discord.com/vivents',
-  linkedinUrl: 'https://www.linkedin.com/vivents',
+  instagramUrl: 'https://www.instagram.com/vivents_app/',
+  discordUrl: 'https://discord.gg/qhdEwvHvX3',
+  linkedinUrl: 'https://linkedin.com/company/artdeal',
 }
 
 export const CANONICAL_URL = 'https://vivents.com'

@@ -5,10 +5,16 @@ type State = {
   closeSignup: () => void
   openSignup: () => void
   toggleSignup: () => void
+
+  introComplete: boolean
+  finishIntro: () => void
 }
 export const useStore = create<State>((set, get) => ({
   displaySignup: false,
   closeSignup: () => set({ displaySignup: false }),
   openSignup: () => set({ displaySignup: true }),
   toggleSignup: () => set({ displaySignup: !get().displaySignup }),
+
+  introComplete: false,
+  finishIntro: () => set({ introComplete: true }),
 }))

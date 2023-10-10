@@ -45,7 +45,7 @@ VIVENTS empowers social interactions and offers a suite of tools that increase o
           </div>
         </div>
       </div>
-      <ContactButton className='hidden lg:block' />
+      <ContactButton className='hidden lg:inline-flex' />
     </div>
   )
 }

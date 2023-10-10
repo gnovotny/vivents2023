@@ -3,13 +3,14 @@ import React, { MutableRefObject, useRef, useState } from 'react'
 import clsx from 'clsx'
 
 import { useIsHome } from '@/lib/hooks'
+import { useStore } from '@/lib/store'
 
 const BgOld = () => {
   const introVideoRef = useRef<HTMLVideoElement>() as MutableRefObject<HTMLVideoElement>
   const loopVideoRef = useRef<HTMLVideoElement>() as MutableRefObject<HTMLVideoElement>
   const isHome = useIsHome()
 
-  const [introComplete, setIntroComplete] = useState(false)
+  const { introComplete, finishIntro } = useStore()
 
   return (
     <div
@@ -50,7 +51,7 @@ const BgOld = () => {
           playsInline
           onEnded={async () => {
             await loopVideoRef.current.play()
-            setIntroComplete(true)
+            finishIntro()
           }}
         >
           <source

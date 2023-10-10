@@ -15,6 +15,7 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
   const methods = useForm()
 
   const [isJoining, setIsJoining] = useState(false)
+  const [isJoined, setIsJoined] = useState(false)
 
   const onSubmit: SubmitHandler<any> = async (data) => {
     if (isJoining) return
@@ -23,7 +24,7 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
       const isValid = true
 
       if (isValid) {
-        // setIsJoining(true)
+        setIsJoining(true)
         // await fetch('/api/signup', {
         //   method: 'POST',
         //   body: JSON.stringify({
@@ -49,6 +50,8 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
         //     throw new Error(e.toString())
         //   })
 
+        setIsJoining(false)
+        setIsJoined(true)
         parentOnSubmit?.()
       }
     } catch (e) {
@@ -59,7 +62,7 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
 
   return (
     <form onSubmit={methods.handleSubmit(onSubmit)}>
-      <div className={clsx('flex flex-row items-end h-full gap-3', className)}>
+      <div className={clsx('flex flex-row justify-end items-end h-full gap-3', className)}>
         {/*<label
             htmlFor='email'
             className={'block text-xs font-medium uppercase text-primary'}
@@ -73,17 +76,31 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
           placeholder='YOUR@EMAIL.COM'
           required
           //
-          className='block w-full p-2 text-xs uppercase bg-transparent border rounded-lg lg:p-4 lg:text-sm !h-8 lg:!h-12 lg:rounded-xl border-primary focus:border-primary focus:ring-primary focus-visible:outline-tertiary'
+          className={clsx(
+            'block w-full p-2 text-xs uppercase bg-transparent border rounded-lg lg:p-4 lg:text-sm h-common lg:rounded-xl border-primary focus:border-primary focus:ring-primary focus-visible:outline-tertiary',
+            {
+              hidden: isJoined,
+            }
+          )}
           {...methods.register('email', {
             required: 'This field is required',
           })}
         />
+        {/*<Button*/}
+        {/*  type='submit'*/}
+        {/*  className='pl-5 pr-3 rounded-lg lg:pl-10 lg:pr-6 lg:min-w-[6rem] lg:rounded-xl !text-xs lg:!text-base whitespace-nowrap'*/}
+        {/*  disabled={isJoining || isJoined}*/}
+        {/*>*/}
+        {/*  signup <ArrowSVG className='inline-block h-auto ml-1 w-[0.6rem] lg:w-3 lg:ml-3' />*/}
+        {/*</Button>*/}
         <Button
-          type='submit'
-          className='pl-5 pr-3 rounded-lg lg:pl-10 lg:pr-6 lg:min-w-[6rem] lg:rounded-xl !h-8 lg:!h-12 !text-xs lg:!text-base whitespace-nowrap'
-          disabled={isJoining}
+          className={clsx('lg:!w-[8.5rem] lg:px-7', {
+            '!w-full lg:!w-full hover:!opacity-100 !pointer-events-none': isJoined,
+          })}
         >
-          signup <ArrowSVG className='inline-block h-auto ml-1 w-[0.6rem] lg:w-3 lg:ml-3' />
+          <span className={clsx({ hidden: isJoined })}>Signup</span>
+          <span className={clsx({ hidden: !isJoined })}>Thank you!</span>
+          <ArrowSVG className={clsx('inline-block w-3 h-auto ml-1', { hidden: isJoined })} />
         </Button>
       </div>
     </form>

@@ -6,6 +6,7 @@ import { AppProps } from 'next/app'
 import Header from '@/components/layout/header'
 import Main from '@/components/layout/main'
 import { useIsHome } from '@/lib/hooks'
+import { useStore } from '@/lib/store'
 
 type PrimaryProps = PropsWithChildren<{
   pageProps: AppProps['pageProps']
@@ -13,11 +14,17 @@ type PrimaryProps = PropsWithChildren<{
 
 const Primary = ({ pageProps, children }: PrimaryProps) => {
   const isHome = useIsHome()
+  const { introComplete } = useStore()
+
   return (
     <section
-      className={clsx('primary relative flex flex-col justify-between w-full max-w-lg h-full p-common', {
-        // '-lg:h-auto -lg:pb-0': isHome,
-      })}
+      className={clsx(
+        'primary relative flex flex-col justify-between w-full max-w-lg h-full p-common opacity-100 transition-opacity duration-1000 delay-500',
+        {
+          // '-lg:h-auto -lg:pb-0': isHome,
+          '!opacity-0': isHome && !introComplete,
+        }
+      )}
     >
       <Header
         className='pb-6'

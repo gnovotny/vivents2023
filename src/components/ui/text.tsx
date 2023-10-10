@@ -7,7 +7,7 @@ type ProseProps = PropsWithChildren<{
 }>
 
 const Text: FunctionComponent<ProseProps> = ({ children, className }) => {
-  return <div className={clsx('thinner uppercase text-sm', className)}>{children}</div>
+  return <div className={clsx('thinner uppercase text-sm leading-[1.15rem]', className)}>{children}</div>
 }
 
 export default Text

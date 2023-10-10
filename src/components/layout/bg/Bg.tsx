@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import { useIsHome, useMediaQuery } from '@/lib/hooks'
 import { down } from '@/lib/utils'
+import { useStore } from '@/lib/store'
 
 const Bg = () => {
   const introVideoRef = useRef<HTMLVideoElement>() as MutableRefObject<HTMLVideoElement>
@@ -12,7 +13,7 @@ const Bg = () => {
   const loopVideoMobileRef = useRef<HTMLVideoElement>() as MutableRefObject<HTMLVideoElement>
   const isHome = useIsHome()
 
-  const [introComplete, setIntroComplete] = useState(false)
+  const { introComplete, finishIntro } = useStore()
 
   const isSmall = useMediaQuery(down('lg'))
 
@@ -79,7 +80,7 @@ const Bg = () => {
           onEnded={async () => {
             if (!isSmall) {
               await loopVideoRef.current.play()
-              setIntroComplete(true)
+              finishIntro()
             }
           }}
         >
@@ -101,7 +102,7 @@ const Bg = () => {
           onEnded={async () => {
             if (isSmall) {
               await loopVideoMobileRef.current.play()
-              setIntroComplete(true)
+              finishIntro()
             }
           }}
         >

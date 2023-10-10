@@ -7,7 +7,7 @@ const ClientsPage = ({ pageProps }: AppProps) => {
   return (
     <div className='flex flex-col items-end justify-between w-full h-full'>
       <Clients />
-      <ContactButton className='hidden lg:block' />
+      <ContactButton className='hidden lg:inline-flex' />
     </div>
   )
 }

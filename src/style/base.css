@@ -5,6 +5,9 @@
 
 /*  --header-height: 3.5rem;*/
   --max-width-page: 2460px;
+
+  --common-height-lg: 2.6rem;
+  --common-height-xs: 1.9rem;
 }
 
 /*@media (orientation: landscape) {
@@ -133,6 +136,13 @@ h1, h2, h3, h4, h5, h6 {
 .-lg\:full-w-common {
   @screen -lg {
     @apply !w-[calc(100%+4rem)] !-mx-8;
+  }
+}
+
+.h-common {
+  @apply h-[var(--common-height-xs)];
+  @screen lg {
+    @apply h-[var(--common-height-lg)];
   }
 }
 /*

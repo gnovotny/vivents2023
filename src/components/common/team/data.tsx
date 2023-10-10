@@ -83,15 +83,15 @@ export const coreMembers: Member[] = [
       // objectPosition: '50% 30%',
     },
   },
-  {
-    group: 'core',
-    name: 'dimitri erhard',
-    position: 'MOTION & CGI DESIGN',
-    image: {
-      src: dimitri,
-      // objectPosition: '50% 30%',
-    },
-  },
+  // {
+  //   group: 'core',
+  //   name: 'dimitri erhard',
+  //   position: 'MOTION & CGI DESIGN',
+  //   image: {
+  //     src: dimitri,
+  //     // objectPosition: '50% 30%',
+  //   },
+  // },
   {
     group: 'core',
     name: 'Jacco Püsmann',

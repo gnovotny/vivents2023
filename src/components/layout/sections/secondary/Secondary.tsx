@@ -6,6 +6,7 @@ import { AppProps } from 'next/app'
 import IntroProse from '@/components/common/intro-prose'
 import Footer from '@/components/layout/footer'
 import { useIsHome } from '@/lib/hooks'
+import { useStore } from '@/lib/store'
 
 type PrimaryProps = PropsWithChildren<{
   pageProps: AppProps['pageProps']
@@ -13,6 +14,7 @@ type PrimaryProps = PropsWithChildren<{
 
 const Secondary = ({ pageProps, children }: PrimaryProps) => {
   const isHome = useIsHome()
+  const { introComplete } = useStore()
   return (
     <section
       className={clsx(
@@ -23,8 +25,9 @@ const Secondary = ({ pageProps, children }: PrimaryProps) => {
       )}
     >
       <div
-        className={clsx('lg:pb-10', 'hidden lg:block', {
+        className={clsx('lg:pb-10 hidden lg:block opacity-0 transition-opacity duration-1000', {
           // 'hidden lg:block': !isHome,
+          '!opacity-100': introComplete,
         })}
       >
         <IntroProse />

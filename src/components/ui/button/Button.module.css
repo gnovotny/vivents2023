@@ -1,11 +1,11 @@
 .root {
   @apply relative uppercase text-primary cursor-pointer inline-flex
-  h-12 px-0 py-0 leading-none transition-all ease-in-out duration-500
+  h-[var(--common-height-xs)] lg:h-[var(--common-height-lg)] px-5 py-0 leading-none transition-all ease-in-out duration-500
   text-center justify-center
-  items-center text-[0.7rem]
-  tracking-wide  rounded-xl
+  items-center
+  tracking-wide  rounded-lg lg:rounded-xl
    shadow-[none] outline-none
-  backdrop-blur !bg-tertiary;
+  backdrop-blur !bg-tertiary -lg:text-sm;
 }
 
 .root:hover {
@@ -19,4 +19,10 @@
 .root:hover,
 .root:focus {
   box-shadow: none;
+}
+
+.root:disabled {
+  &:hover {
+    @apply !opacity-70;
+  }
 }

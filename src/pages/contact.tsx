@@ -118,14 +118,14 @@ const ContactPage = ({ pageProps }: AppProps) => {
               </div>
             </div>
           </div>
-          <div className='flex flex-col gap-6 lg:gap-0 lg:flex-row lg:justify-between'>
+          <div className='flex flex-col lg:gap-0 lg:flex-row lg:justify-between lg:items-end'>
             <div className='flex flex-col gap-1'>
               <Title>Contact</Title>
               <NextLink href={`mailto:${INFO.email}`}>
                 <Text className='leading-none'>{INFO.email}</Text>
               </NextLink>
             </div>
-            <div className='flex flex-col gap-1'>
+            <div className='flex flex-col -lg:pt-[1.1rem]'>
               <Link
                 href='/imprint'
                 className='group'

@@ -36,7 +36,7 @@ function MemberLabel({
 }) {
   return (
     <div className={clsx('block w-full pb-4 pt-10 lg:py-0', className)}>
-      <div className={clsx('flex flex-col gap-1')}>
+      <div className={clsx('flex flex-col gap-2')}>
         {withGroup && <Title>{renderGroup(member.group)}</Title>}
         <div className='flex flex-col gap-1 lg:flex-row lg:items-end lg:gap-2'>
           <Text className='!leading-none'>{member.name}</Text>
@@ -257,7 +257,7 @@ export default function Team({ className }: { className?: string }) {
       </div>
 
       <div className='lg:hidden'>
-        <MemberLabel member={members[currentSlide]} />
+        <MemberLabel member={members[currentSlide]} withGroup />
       </div>
 
       {/*<SwiperNumbers*/}

@@ -11,11 +11,11 @@ import ArrowSVG from '@/components/icons/arrow-left.svg'
 import Link, { LinkProps } from '@/components/ui/link'
 import { INFO } from '@/config'
 import { useIsHome, useMediaQuery } from '@/lib/hooks'
+import { down } from '@/lib/utils'
 
 import discord from './assets/discord.png'
 import insta from './assets/insta.png'
 import linkedin from './assets/linkedin.png'
-import { down } from '@/lib/utils'
 
 type HeaderProps = {
   className?: string
@@ -32,7 +32,7 @@ const NAV_ITEMS = [
 const NavItem = ({ children, className, isActive, ...props }: LinkProps) => (
   <Link
     className={clsx(
-      'uppercase thinner leading-none px-4 py-2 lg:py-3 border rounded-xl border-transparent',
+      'uppercase thinner leading-none px-4 py-2 lg:py-3 h-common border rounded-xl border-transparent',
       {
         '!border-primary ': isActive,
       },
@@ -63,7 +63,7 @@ const Header = ({ pageProps, className }: HeaderProps) => {
         className='w-full'
       >
         {/*-mt-2 -ml-4 lg:-mt-3 w-[calc(100%+2rem)]*/}
-        <nav className='flex justify-between w-full -mt-2 text-xs lg:-mt-3 lg:text-base'>
+        <nav className='flex justify-between -mt-2 text-xs w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-base'>
           {NAV_ITEMS.map(({ name, href, className }) => (
             <NavItem
               key={name}
@@ -77,11 +77,16 @@ const Header = ({ pageProps, className }: HeaderProps) => {
         </nav>
         <section
           className={clsx('flex flex-row justify-between items-center py-6 lg:hidden', {
-            hidden: isHome,
+            // hidden: isHome,
           })}
         >
-          <div>
-            <NextLink href='/'>
+          <div
+            className={clsx('transition-[transform,opacity] duration-200 will-change-[opacity,transform]', {
+              '-translate-x-4': pathname === '/company',
+              'opacity-0': isHome,
+            })}
+          >
+            <NextLink className='block' href='/'>
               <ArrowSVG className='w-6' />
             </NextLink>
           </div>
