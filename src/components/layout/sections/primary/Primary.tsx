@@ -16,7 +16,7 @@ const Primary = ({ pageProps, children }: PrimaryProps) => {
   return (
     <section
       className={clsx('primary relative flex flex-col justify-between w-full max-w-lg h-full p-common', {
-        '-lg:h-auto -lg:pb-0': isHome,
+        // '-lg:h-auto -lg:pb-0': isHome,
       })}
     >
       <Header

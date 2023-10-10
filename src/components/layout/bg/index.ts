@@ -1,1 +1,1 @@
-export { default } from './Bg'
+export { default } from './Bg.old'

@@ -5,6 +5,7 @@ import { AppProps } from 'next/app'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { usePathname } from 'next/navigation'
+import useMeasure from 'react-use-measure'
 
 import ArrowSVG from '@/components/icons/arrow-left.svg'
 import Link, { LinkProps } from '@/components/ui/link'
@@ -45,65 +46,76 @@ const NavItem = ({ children, className, isActive, ...props }: LinkProps) => (
 const Header = ({ pageProps, className }: HeaderProps) => {
   const pathname = usePathname()
   const isHome = useIsHome()
+  const [headerRef, { height: headerHeight }] = useMeasure()
+
   return (
-    <header className={clsx('relative w-full', className)}>
-      {/*-mt-2 -ml-4 lg:-mt-3 w-[calc(100%+2rem)]*/}
-      <nav className='flex justify-between  text-xs -mt-2 lg:-mt-3 w-full   lg:text-base'>
-        {NAV_ITEMS.map(({ name, href, className }) => (
-          <NavItem
-            key={name}
-            href={href}
-            className={className}
-            isActive={href === pathname}
-          >
-            {name}
-          </NavItem>
-        ))}
-      </nav>
-      <section
-        className={clsx('flex flex-row justify-between items-center pt-8 lg:hidden', {
-          hidden: isHome,
-        })}
+    <header
+      className={clsx('relative w-full transition-[height] duration-700', className)}
+      // style={{ maxHeight: headerHeight ?? undefined, minHeight: headerHeight ?? undefined}}
+      style={{ height: headerHeight > 0 ? headerHeight : undefined }}
+    >
+      <div
+        ref={headerRef}
+        className='w-full'
       >
-        <div>
-          <NextLink href='/'>
-            <ArrowSVG className='w-6' />
-          </NextLink>
-        </div>
-        <div
-          className={clsx('flex flex-row space-x-3 opacity-0 transition-opacity duration-300', {
-            '!opacity-100': pathname === '/contact',
+        {/*-mt-2 -ml-4 lg:-mt-3 w-[calc(100%+2rem)]*/}
+        <nav className='flex justify-between w-full -mt-2 text-xs lg:-mt-3 lg:text-base'>
+          {NAV_ITEMS.map(({ name, href, className }) => (
+            <NavItem
+              key={name}
+              href={href}
+              className={className}
+              isActive={href === pathname}
+            >
+              {name}
+            </NavItem>
+          ))}
+        </nav>
+        <section
+          className={clsx('flex flex-row justify-between items-center pt-8 lg:hidden', {
+            hidden: isHome,
           })}
         >
-          <a
-            href={INFO.instagramUrl}
-            target='_blank'
+          <div>
+            <NextLink href='/'>
+              <ArrowSVG className='w-6' />
+            </NextLink>
+          </div>
+          <div
+            className={clsx('flex flex-row space-x-3 opacity-0 transition-opacity duration-300', {
+              '!opacity-100': pathname === '/contact',
+            })}
           >
-            <Image
-              src={insta}
-              alt='Instagram'
-            />
-          </a>
-          <a
-            href={INFO.discordUrl}
-            target='_blank'
-          >
-            <Image
-              src={discord}
-              alt='Discord'
-            />
-          </a>
-          <a
-            href={INFO.linkedinUrl}
-            target='_blank'
-          >
-            <Image
-              src={linkedin}
-              alt='Linkedin'
-            />
-          </a>
-        </div>
-      </section>
+            <a
+              href={INFO.instagramUrl}
+              target='_blank'
+            >
+              <Image
+                src={insta}
+                alt='Instagram'
+              />
+            </a>
+            <a
+              href={INFO.discordUrl}
+              target='_blank'
+            >
+              <Image
+                src={discord}
+                alt='Discord'
+              />
+            </a>
+            <a
+              href={INFO.linkedinUrl}
+              target='_blank'
+            >
+              <Image
+                src={linkedin}
+                alt='Linkedin'
+              />
+            </a>
+          </div>
+        </section>
+      </div>
     </header>
   )
 }

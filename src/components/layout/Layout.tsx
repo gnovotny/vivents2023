@@ -7,7 +7,7 @@ import { SignupDrawer } from '@/components/common/signup'
 import { useTimeout } from '@/lib/hooks'
 import { useStore } from '@/lib/store'
 
-import Bg from './bg'
+import BgOld from './bg'
 import Blur from './blur'
 import Primary from './sections/primary'
 import Secondary from './sections/secondary'
@@ -38,7 +38,7 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, pageProps }) => 
           '!h-[100svh] !min-h-[100svh] !max-h-[100svh]'
         )}
       >
-        <Bg />
+        <BgOld />
         <Blur />
         <Primary pageProps={pageProps}>{children}</Primary>
         <Secondary pageProps={pageProps} />

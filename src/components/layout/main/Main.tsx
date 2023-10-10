@@ -17,7 +17,7 @@ const Main = ({ children, className }: MainProps) => {
     >
       <PageTransitionStack
         customClassName='w-full h-full'
-        customInactiveClassName='top-0 left-0'
+        customInactiveClassName='inset-0'
       >
         {children}
       </PageTransitionStack>

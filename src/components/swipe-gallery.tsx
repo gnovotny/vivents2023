@@ -1,14 +1,14 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
+
 import clsx from 'clsx'
 import { useKeenSlider } from 'keen-slider/react'
-import { down } from 'lib/media-query'
-import { useMediaQuery } from 'lib/use-media-query'
-import { useParams, usePathname, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
-import SwiperDots from '../swiper-dots'
-import SwiperNumbers from '../swiper-numbers'
+import { usePathname } from 'next/navigation'
+
+import { useMediaQuery } from '@/lib/hooks'
+import { down } from '@/lib/utils'
 
 type GalleryImage = { src: string; altText: string; className?: string }
 
@@ -17,7 +17,7 @@ function GallerySlide({
   active,
   className,
   isInteractive = false,
-  sliderDisabled = true
+  sliderDisabled = true,
 }: {
   image: GalleryImage
   active?: boolean
@@ -37,7 +37,7 @@ function GallerySlide({
       <div className={clsx('relative block h-full w-full')}>
         <Image
           fill
-          sizes='(min-width: 1024px) 66vw, 100vw'
+          sizes='(min-width: 1024px) 33vw, 100vw'
           priority={active}
           loading='eager'
           src={image.src}
@@ -45,7 +45,7 @@ function GallerySlide({
           className={clsx(
             'relative h-full w-full object-cover',
             {
-              'transition duration-300 ease-in-out group-hover:scale-105': isInteractive
+              'transition duration-300 ease-in-out group-hover:scale-105': isInteractive,
             },
             image.className
           )}
@@ -55,29 +55,7 @@ function GallerySlide({
   )
 }
 
-export function SwipeGallery({
-  images,
-  className
-}: {
-  images: GalleryImage[]
-  className?: string
-}) {
-  const pathname = usePathname()
-  // const params = useParams()
-  //
-  // const searchParams = useSearchParams()
-  // const imageSearchParam = searchParams?.get('image')
-  // const imageIndex = imageSearchParam ? parseInt(imageSearchParam) : 0
-  //
-  // const nextSearchParams = new URLSearchParams(searchParams?.toString())
-  // const nextImageIndex = imageIndex + 1 < images.length ? imageIndex + 1 : 0
-  // nextSearchParams.set('image', nextImageIndex.toString())
-  // const nextUrl = createUrl(pathname!, nextSearchParams)
-  //
-  // const previousSearchParams = new URLSearchParams(searchParams?.toString())
-  // const previousImageIndex = imageIndex === 0 ? images.length - 1 : imageIndex - 1
-  // previousSearchParams.set('image', previousImageIndex.toString())
-  // const previousUrl = createUrl(pathname!, previousSearchParams)
+export function SwipeGallery({ images, className }: { images: GalleryImage[]; className?: string }) {
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const sliderContainerRef = useRef<HTMLDivElement>(null)
@@ -96,14 +74,14 @@ export function SwipeGallery({
       loop: true,
       slides: {
         perView: 1,
-        origin: 'center'
+        origin: 'center',
       },
       disabled: sliderDisabled,
       created: () => setSliderIsMounted(true),
       slideChanged(s) {
         const slideIndex = s.track?.details.rel
         setCurrentSlide(slideIndex)
-      }
+      },
     },
     [
       (slider) => {
@@ -133,7 +111,7 @@ export function SwipeGallery({
         slider.on('dragStarted', clearNextTimeout)
         slider.on('animationEnded', nextTimeout)
         slider.on('updated', nextTimeout)
-      }
+      },
     ]
   )
 
@@ -153,10 +131,7 @@ export function SwipeGallery({
       // if the touch area overlaps with the screen edges
       // it's likely to trigger the navigation. We prevent the
       // touchstart event in that case.
-      if (
-        touchXPosition - touchXRadius < 10 ||
-        touchXPosition + touchXRadius > window.innerWidth - 10
-      )
+      if (touchXPosition - touchXRadius < 10 || touchXPosition + touchXRadius > window.innerWidth - 10)
         event.preventDefault()
     }
 
@@ -188,21 +163,13 @@ export function SwipeGallery({
             sliderDisabled={sliderDisabled}
           />
         ))}
-        <SwiperDots
-          className='absolute bottom-0 left-1/2 -translate-x-1/2 p-4 lg:hidden'
-          length={images.length}
-          activeIndex={currentSlide}
-          dotClassName='border-white'
-          activeDotClassName='bg-white'
-        />
-        <SwiperNumbers
-          className='absolute bottom-0 left-0 p-4 -lg:hidden'
-          length={images.length}
-          activeIndex={currentSlide}
-          numberClassName='text-white'
-          setCurrentSlide={(slide: number) => slider.current?.moveToIdx(slide)}
-        />
       </div>
+      <SwiperNumbers
+        className='p-4 -lg:hidden'
+        length={images.length}
+        activeIndex={currentSlide}
+        setCurrentSlide={(slide: number) => slider.current?.moveToIdx(slide)}
+      />
     </section>
   )
 }
