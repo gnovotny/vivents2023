@@ -22,6 +22,7 @@ import tobias from './assets/tobias.jpg'
 import walid from './assets/walid.jpg'
 
 export type Member = {
+  group: string
   name: string
   position?: ReactNode | string
   image: Omit<ImageProps, 'alt'> & {
@@ -31,6 +32,7 @@ export type Member = {
 
 export const coreMembers: Member[] = [
   {
+    group: 'core',
     name: 'Sarah Schlagenhauf',
     position: <>CEO & CO-FOUNDER</>,
     image: {
@@ -38,6 +40,7 @@ export const coreMembers: Member[] = [
     },
   },
   {
+    group: 'core',
     name: 'Adam Mann',
     position: <>CSO & CO-FOUNDER</>,
     image: {
@@ -46,6 +49,7 @@ export const coreMembers: Member[] = [
     },
   },
   {
+    group: 'core',
     name: 'Linus Inderbitzin',
     position: 'CTO',
     image: {
@@ -53,6 +57,7 @@ export const coreMembers: Member[] = [
     },
   },
   {
+    group: 'core',
     name: 'Ilija Gautschi',
     position: 'Art Director',
     image: {
@@ -61,6 +66,7 @@ export const coreMembers: Member[] = [
     },
   },
   {
+    group: 'core',
     name: 'Walid El Barbir',
     position: 'Head of Design',
     image: {
@@ -69,6 +75,7 @@ export const coreMembers: Member[] = [
     },
   },
   {
+    group: 'core',
     name: 'AUDREY RAPPOLD',
     position: 'GRAPHIC DESIGN',
     image: {
@@ -77,6 +84,7 @@ export const coreMembers: Member[] = [
     },
   },
   {
+    group: 'core',
     name: 'dimitri erhard',
     position: 'MOTION & CGI DESIGN',
     image: {
@@ -85,6 +93,7 @@ export const coreMembers: Member[] = [
     },
   },
   {
+    group: 'core',
     name: 'Jacco Püsmann',
     position: 'Copywriter',
     image: {
@@ -93,6 +102,7 @@ export const coreMembers: Member[] = [
     },
   },
   {
+    group: 'core',
     name: 'Gabe Novotny',
     position: 'Fullstack Developer',
     image: {
@@ -102,6 +112,7 @@ export const coreMembers: Member[] = [
 ]
 export const advisors: Member[] = [
   {
+    group: 'advisors',
     name: 'Dr. Tobias Reichmuth',
     position: 'Entrepreneurial Advisor',
     image: {
@@ -109,6 +120,7 @@ export const advisors: Member[] = [
     },
   },
   {
+    group: 'advisors',
     name: 'Claudia Bolliger-Winkler',
     position: (
       <>
@@ -120,6 +132,7 @@ export const advisors: Member[] = [
     },
   },
   {
+    group: 'advisors',
     name: 'Michael Hinderling',
     position: 'Digital Innovation Advisor',
     image: {
@@ -127,6 +140,7 @@ export const advisors: Member[] = [
     },
   },
   {
+    group: 'advisors',
     name: 'Stefan Gautschi',
     position: (
       <>
@@ -138,6 +152,7 @@ export const advisors: Member[] = [
     },
   },
   {
+    group: 'advisors',
     name: 'Richard Schäli',
     position: 'New Economy Advisor',
     image: {
@@ -147,6 +162,7 @@ export const advisors: Member[] = [
 ]
 export const artAdvisors: Member[] = [
   {
+    group: 'artAdvisors',
     name: 'Sophie Neuendorf',
     position: 'VP Artnet',
     image: {
@@ -154,6 +170,7 @@ export const artAdvisors: Member[] = [
     },
   },
   {
+    group: 'artAdvisors',
     name: 'Jonathan Levy',
     position: 'Art Professional / Entrepreneur',
     image: {
@@ -161,6 +178,7 @@ export const artAdvisors: Member[] = [
     },
   },
   {
+    group: 'artAdvisors',
     name: 'Nadine A. Ghaffar',
     position: 'Founder Art D‘Égypte',
     image: {
@@ -168,6 +186,7 @@ export const artAdvisors: Member[] = [
     },
   },
   {
+    group: 'artAdvisors',
     name: 'Michelle Edelmann',
     position: 'CEO, Traffic Creative Management',
     image: {
@@ -176,8 +195,4 @@ export const artAdvisors: Member[] = [
   },
 ]
 
-export const members = {
-  coreMembers,
-  advisors,
-  artAdvisors,
-}
+export const members = [...coreMembers, ...advisors, ...artAdvisors]

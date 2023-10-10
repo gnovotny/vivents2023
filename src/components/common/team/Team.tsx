@@ -4,10 +4,48 @@ import clsx from 'clsx'
 import { useKeenSlider } from 'keen-slider/react'
 import Image from 'next/image'
 
+import Text from '@/components/ui/text'
+import Title from '@/components/ui/title'
 import { useMediaQuery } from '@/lib/hooks'
 import { down } from '@/lib/utils'
 
 import { Member, members } from './data'
+
+function renderGroup(group: string) {
+  switch (group) {
+    case 'advisors':
+      return 'Advisors'
+    case 'artAdvisors':
+      return 'Art Advisors'
+    case 'core':
+    default:
+      return 'Core Team'
+  }
+}
+
+function MemberLabel({
+  member,
+  className,
+  sliderDisabled = true,
+}: {
+  member: Member
+  active?: boolean
+  className?: string
+  isInteractive?: boolean
+  sliderDisabled?: boolean
+}) {
+  return (
+    <div className={clsx('relative block w-full pb-4 pt-10', className)}>
+      <div className={clsx('relative flex flex-col gap-1')}>
+        <Title>{renderGroup(member.group)}</Title>
+        <div>
+          <Text>{member.name}</Text>
+          <Text className='text-xs'>{member.position}</Text>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function MemberSlide({
   member,
@@ -31,7 +69,7 @@ function MemberSlide({
         className
       )}
     >
-      <div className={clsx('relative block h-full w-full rounded-xl overflow-hidden')}>
+      <div className={clsx('relative block h-full w-full rounded-xl overflow-hidden -lg:opacity-80')}>
         <Image
           fill
           sizes='(min-width: 1024px) 33vw, 100vw'
@@ -153,9 +191,9 @@ export default function Team({ className }: { className?: string }) {
           'keen-slider relative flex h-full lg:h-auto lg:aspect-square w-full flex-grow lg:flex-grow-0 overflow-hidden -lg:full-w-common'
         )}
       >
-        {[...members.coreMembers, ...members.advisors, ...members.artAdvisors].map((member, index) => (
+        {members.map((member, index) => (
           <MemberSlide
-            key={`team-slide-${index}`}
+            key={`member-slide-${index}`}
             member={member}
             active={index === currentSlide}
             className={'keen-slider__slide'}
@@ -163,6 +201,11 @@ export default function Team({ className }: { className?: string }) {
           />
         ))}
       </div>
+      <MemberLabel
+        member={members[currentSlide]}
+        sliderDisabled={sliderDisabled}
+      />
+
       {/*<SwiperNumbers*/}
       {/*  className='p-4 -lg:hidden'*/}
       {/*  length={images.length}*/}

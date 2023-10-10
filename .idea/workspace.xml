@@ -5,79 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
-      <change afterPath="$PROJECT_DIR$/src/components/common/team_ref/Team.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team_ref/data.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/team_ref/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/adam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/caro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/carolin-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/claudia-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/claudia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/gabriel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/georgie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/gez.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/ilija.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/jacco.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/jaco.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/jonathan-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/joseph-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/joseph.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/kamiar-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/kamiar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/levi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/linus-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/linus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/marc-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/mario-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/mario.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/melanie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/michael.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/michelle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/nadine-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/nadine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/ADAM 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/AUDREY 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/CLAUDIA 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/DIMITRI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/GABE 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/ILIJA 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/JACCO 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/LEVY 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/LINUS 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/MICHAEL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/MICHELE 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/NADINE 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/SARAH 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/SCHÄLI 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/SOPHIE 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/STEFAN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/TOBIAS 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/new/WALID 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/rashid-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/rashid.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/richard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/sarah-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/sarah.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/sophie-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/sophie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/stefan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/tobias-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/tobias.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/walid-estee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/walid.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/card/TeamCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team_ref/card/TeamCard.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/card/TeamCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team_ref/card/TeamCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/card/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team_ref/card/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/team/data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team/data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/slider/TeamSlider.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team_ref/slider/TeamSlider.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/slider/TeamSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team_ref/slider/TeamSlider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/slider/TeamSliderDesktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team_ref/slider/TeamSliderDesktop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/slider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team_ref/slider/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/team_ref/types.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/company.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/company.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/base.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +103,7 @@
       <updated>1696771278748</updated>
       <workItem from="1696771280385" duration="20560000" />
       <workItem from="1696834532074" duration="32140000" />
-      <workItem from="1696931496407" duration="12817000" />
+      <workItem from="1696931496407" duration="14529000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -279,7 +209,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696941223518</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="l">
+      <option name="closed" value="true" />
+      <created>1696944838903</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696944838903</updated>
+    </task>
+    <task id="LOCAL-00015" summary="l">
+      <option name="closed" value="true" />
+      <created>1696945290108</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696945290108</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
