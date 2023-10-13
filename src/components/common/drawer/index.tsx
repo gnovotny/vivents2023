@@ -11,6 +11,7 @@ type DrawerProps = {
   description?: string
   children: ReactNode
   isOpen?: boolean
+  blurOverlay?: boolean
   onClose: () => void
 }
 
@@ -23,7 +24,7 @@ const overlayTransitionProps = {
   leaveTo: '-lg:backdrop-blur-0',
 }
 
-export default function Drawer({ title = '', description = '', children, isOpen, onClose }: DrawerProps) {
+export default function Drawer({ title = '', description = '', children, isOpen, onClose, blurOverlay }: DrawerProps) {
   const pathname = usePathname()
 
   return (

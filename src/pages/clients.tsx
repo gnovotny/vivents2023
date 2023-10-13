@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app'
 
-import Clients from '@/components/common/clients'
+import Clients from 'src/components/views/clients'
 import ContactButton from '@/components/common/contact-button'
 
 const ClientsPage = ({ pageProps }: AppProps) => {

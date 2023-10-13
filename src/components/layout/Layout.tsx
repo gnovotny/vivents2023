@@ -2,9 +2,9 @@ import React, { FC, PropsWithChildren, useEffect } from 'react'
 
 import clsx from 'clsx'
 import { AppProps } from 'next/app'
+import { usePathname } from 'next/navigation'
 
-import { SignupDrawer } from '@/components/common/signup'
-import { useTimeout } from '@/lib/hooks'
+import SignupDrawer from '@/components/views/signup-drawer'
 import { useStore } from '@/lib/store'
 
 import BgOld from './bg'
@@ -18,19 +18,19 @@ type LayoutProps = {
 
 const SignupUI: FC = () => {
   const { displaySignup, closeSignup, openSignup, introComplete } = useStore()
-
-  // useTimeout(openSignup, 20000)
+  const pathname = usePathname()
 
   useEffect(() => {
     if (introComplete) {
       setTimeout(openSignup, 20000)
     }
-  }, [introComplete])
+  }, [introComplete, openSignup])
 
   return (
     <SignupDrawer
       open={displaySignup}
       onClose={closeSignup}
+      blurOverlay={pathname === '/company'}
     />
   )
 }

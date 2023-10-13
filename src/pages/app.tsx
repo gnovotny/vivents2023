@@ -27,7 +27,7 @@ VIVENTS empowers social interactions and offers a suite of tools that increase o
               <img
                 src='/images/app/apple-store.svg'
                 alt='apple-store'
-                className='h-[40px] w-auto lg:h-[50px]'
+                className='w-auto h-[40px]'
               />
             </a>
             <a
@@ -39,7 +39,7 @@ VIVENTS empowers social interactions and offers a suite of tools that increase o
               <img
                 src='/images/app/google-store.svg'
                 alt='google-store'
-                className='h-[40px] w-auto lg:h-[50px]'
+                className='w-auto h-[40px]'
               />
             </a>
           </div>

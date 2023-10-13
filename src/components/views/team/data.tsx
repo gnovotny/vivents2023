@@ -94,7 +94,7 @@ export const coreMembers: Member[] = [
   // },
   {
     group: 'core',
-    name: 'Jacco Püsmann',
+    name: 'Jacco Prüsmann',
     position: 'Copywriter',
     image: {
       src: jacco,

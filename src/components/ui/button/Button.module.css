@@ -22,7 +22,8 @@
 }
 
 .root:disabled {
+  @apply opacity-60;
   &:hover {
-    @apply !opacity-70;
+    @apply opacity-60;
   }
 }

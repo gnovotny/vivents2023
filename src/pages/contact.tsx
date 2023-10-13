@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import NextLink from 'next/link'
 
+import Signup from '@/components/common/signup'
 import discord from '@/components/layout/header/assets/discord.png'
 import insta from '@/components/layout/header/assets/insta.png'
 import linkedin from '@/components/layout/header/assets/linkedin.png'
@@ -16,10 +17,9 @@ import Title from '@/components/ui/title'
 import { INFO } from '@/config'
 import { useMediaQuery, useSize } from '@/lib/hooks'
 import { down } from '@/lib/utils'
-import { Signup } from '@/components/common/signup'
 // import Map from '@/components/common/map'
 
-const Map = dynamic(() => import('@/components/common/map').then((m) => m.default), {
+const Map = dynamic(() => import('src/components/views/map').then((m) => m.default), {
   ssr: false,
 })
 const ContactPage = ({ pageProps }: AppProps) => {

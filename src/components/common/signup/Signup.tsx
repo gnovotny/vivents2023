@@ -45,7 +45,7 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
           .then((res) => {
             setIsJoining(false)
             setIsJoined(true)
-            parentOnSubmit?.()
+            setTimeout(() => parentOnSubmit?.(), 1500)
           })
           .catch((e) => {
             console.log(e)
@@ -75,6 +75,7 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
           autoComplete='email'
           placeholder='YOUR@EMAIL.COM'
           required
+          disabled={isJoining}
           //
           className={clsx(
             'block w-full p-2 text-xs uppercase bg-transparent border rounded-lg lg:p-4 lg:text-sm h-common lg:rounded-xl border-primary focus:border-primary focus:ring-primary focus-visible:outline-tertiary',
@@ -94,13 +95,15 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
         {/*  signup <ArrowSVG className='inline-block h-auto ml-1 w-[0.6rem] lg:w-3 lg:ml-3' />*/}
         {/*</Button>*/}
         <Button
-          className={clsx('lg:!w-[8.5rem] lg:px-7', {
-            '!w-full lg:!w-full hover:!opacity-100 !pointer-events-none': isJoined,
+          className={clsx('lg:!min-w-[8.5rem] lg:px-7 whitespace-nowrap', {
+            '!w-full lg:!w-full !opacity-100 hover:!opacity-100 !pointer-events-none': isJoined,
           })}
+          disabled={isJoining || isJoined}
         >
-          <span className={clsx({ hidden: isJoined })}>Signup</span>
+          <span className={clsx('animate-pulse', { hidden: !isJoining })}>Please wait</span>
+          <span className={clsx({ hidden: isJoined || isJoining })}>Signup</span>
           <span className={clsx({ hidden: !isJoined })}>Thank you!</span>
-          <ArrowSVG className={clsx('inline-block w-3 h-auto ml-1', { hidden: isJoined })} />
+          <ArrowSVG className={clsx('inline-block w-3 h-auto ml-1', { hidden: isJoined || isJoining })} />
         </Button>
       </div>
     </form>

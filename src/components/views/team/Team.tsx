@@ -266,7 +266,7 @@ export default function Team({ className }: { className?: string }) {
       {/*  activeIndex={currentSlide}*/}
       {/*  setCurrentSlide={(slide: number) => slider.current?.moveToIdx(slide)}*/}
       {/*/>*/}
-      <div className='flex-col hidden pt-10 lg:flex gap-6'>
+      <div className='flex-col hidden lg:flex flex-grow justify-evenly'>
         <MemberGroup
           id='core'
           members={coreMembers}

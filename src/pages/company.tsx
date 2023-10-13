@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app'
-import Team from 'src/components/common/team'
+import Team from 'src/components/views/team'
 import { ContactButtonVariant } from '@/components/common/contact-button'
 
 const CompanyPage = ({ pageProps }: AppProps) => {

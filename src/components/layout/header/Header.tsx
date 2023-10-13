@@ -32,7 +32,7 @@ const NAV_ITEMS = [
 const NavItem = ({ children, className, isActive, ...props }: LinkProps) => (
   <Link
     className={clsx(
-      'uppercase thinner leading-none px-4 py-2 lg:py-3 h-common border rounded-xl border-transparent',
+      'uppercase thinner leading-none px-4 py-2 lg:py-3 h-common border rounded-xl border-transparent hover:border-primary transition-colors duration-300',
       {
         '!border-primary ': isActive,
       },
@@ -48,7 +48,7 @@ const Header = ({ pageProps, className }: HeaderProps) => {
   const pathname = usePathname()
   const isHome = useIsHome()
   // const [headerRef, { height: headerHeight }] = useMeasure()
-  // const isSmall = useMediaQuery(down('lg'))
+  const isSmall = useMediaQuery(down('lg'))
 
   // const headerStyle = isSmall ? { height: headerHeight > 0 ? headerHeight : undefined } : undefined
 
@@ -69,7 +69,7 @@ const Header = ({ pageProps, className }: HeaderProps) => {
               key={name}
               href={href}
               className={className}
-              isActive={href === pathname}
+              isActive={href === pathname || (!isSmall && href === '/company' && pathname === '/contact')}
             >
               {name}
             </NavItem>
