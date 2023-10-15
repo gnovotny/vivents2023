@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 import Text from '@/components/ui/text'
 import Title from '@/components/ui/title'
-import { flicker } from '@/lib/gsap'
+import { flicker, gsap } from '@/lib/gsap'
 import { useMediaQuery } from '@/lib/hooks'
 import { down } from '@/lib/utils'
 
@@ -243,6 +243,7 @@ export default function Team({ className }: { className?: string }) {
 
     return () => {
       flickerTl.kill()
+      gsap.set(sliderRef2.current, { opacity: 1 })
     }
   }, [sliderDisabled, isSmall, currentSlide])
 

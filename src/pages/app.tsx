@@ -8,32 +8,36 @@ import { useStore } from '@/lib/store'
 import { down } from '@/lib/utils'
 
 const AppPage = () => {
-  const { finishIntroProse, introVideoComplete } = useStore()
+  const { introProseComplete } = useStore()
   const isHome = useIsHome()
   const isSmall = useMediaQuery(down('lg'))
-  const ref = useFlickerReveal({
+  const textRef = useFlickerReveal({
     // flickerFrames: 115,
-    active: introVideoComplete || (!isHome && !isSmall),
+    active: introProseComplete || (!isHome && isSmall),
     childNodes: true,
+    childStagger: '>0.3',
     stDuration: 0.14,
-    stStagger: 0.01,
+    stStagger: 0.0075,
+    delay: !isHome && isSmall ? 1 : 0,
     // onComplete: ,
   })
 
   return (
     <div className='flex flex-col items-end justify-between w-full h-full'>
       <div className='flex flex-col w-full'>
-        <Text>
-          The VIVENTS Marketplace is a gamechanger in social e-commerce, specializing in Trading art, luxury, fashion,
-          and digital collectibles. We connect today's and tomorrow's most sought-after sellers and buyers.
-          <br />
-          <br />
-        </Text>
-        <Text>
-          VIVENTS empowers social interactions and offers a suite of tools that increase operational transparency and
-          efficiency while scaling your community. We're not just another platform; we're redefining value exchange and
-          access.
-        </Text>
+        <div ref={textRef} className='opacity-0'>
+          <Text>
+            The VIVENTS Marketplace is a gamechanger in social e-commerce, specializing in Trading art, luxury, fashion,
+            and digital collectibles. We connect today's and tomorrow's most sought-after sellers and buyers.
+            <br />
+            <br />
+          </Text>
+          <Text>
+            VIVENTS empowers social interactions and offers a suite of tools that increase operational transparency and
+            efficiency while scaling your community. We're not just another platform; we're redefining value exchange and
+            access.
+          </Text>
+        </div>
 
         <div className='flex flex-col gap-3 pt-common'>
           <Title>Available on</Title>

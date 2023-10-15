@@ -5,29 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
-      <change afterPath="$PROJECT_DIR$/src/lib/hooks/useFlickerReveal.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/intro-prose/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/intro-prose/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.old.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/link/Link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/link/Link.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/views/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/gsap/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/gsap/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/hooks/useIsHome.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/hooks/useIsHome.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +107,7 @@
       <workItem from="1697094301011" duration="20000" />
       <workItem from="1697186765461" duration="8576000" />
       <workItem from="1697282949795" duration="314000" />
-      <workItem from="1697370104541" duration="17506000" />
+      <workItem from="1697370104541" duration="19019000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -345,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697205485332</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="l">
+      <option name="closed" value="true" />
+      <created>1697390438557</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1697390438557</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
