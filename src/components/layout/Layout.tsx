@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import SignupDrawer from '@/components/views/signup-drawer'
 import { useStore } from '@/lib/store'
 
-import BgOld from './bg'
+import Bg from './bg'
 import Blur from './blur'
 import Primary from './sections/primary'
 import Secondary from './sections/secondary'
@@ -17,14 +17,14 @@ type LayoutProps = {
 }
 
 const SignupUI: FC = () => {
-  const { displaySignup, closeSignup, openSignup, introComplete } = useStore()
+  const { displaySignup, closeSignup, openSignup, introVideoComplete } = useStore()
   const pathname = usePathname()
 
   useEffect(() => {
-    if (introComplete) {
+    if (introVideoComplete) {
       setTimeout(openSignup, 20000)
     }
-  }, [introComplete, openSignup])
+  }, [introVideoComplete, openSignup])
 
   return (
     <SignupDrawer
@@ -44,7 +44,7 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, pageProps }) => 
           '!h-[100svh] !min-h-[100svh] !max-h-[100svh]'
         )}
       >
-        <BgOld />
+        <Bg />
         <Blur />
         <Primary pageProps={pageProps}>{children}</Primary>
         <Secondary pageProps={pageProps} />

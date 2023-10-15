@@ -7,7 +7,7 @@ import IntroProse from '@/components/common/intro-prose'
 import { useStore } from '@/lib/store'
 
 const IndexPage = ({ pageProps }: AppProps) => {
-  const { introComplete } = useStore()
+  const { introVideoComplete } = useStore()
   return (
     <div
       className={clsx('lg:hidden !opacity-100 transition-opacity duration-1000 -mt-12', {

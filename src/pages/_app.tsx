@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import { domAnimation, LazyMotion } from 'framer-motion'
+// import { domAnimation, LazyMotion } from 'framer-motion'
 import { AppProps } from 'next/app'
 // import { Cousine } from 'next/font/google'
 import localFont from 'next/font/local'
@@ -51,11 +51,11 @@ const App = ({ Component, pageProps, ...props }: AppProps) => {
         }
       `}</style>
       <Head />
-      <LazyMotion features={domAnimation}>
+      {/*<LazyMotion features={domAnimation}>*/}
         <Layout pageProps={pageProps}>
           <Component pageProps={pageProps} />
         </Layout>
-      </LazyMotion>
+      {/*</LazyMotion>*/}
     </>
   )
 }

@@ -5,66 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
-      <change afterPath="$PROJECT_DIR$/src/components/views/signup-drawer/SignupDrawer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/views/signup-drawer/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/hooks/useFlickerReveal.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/assets/bucherer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/assets/bucherer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/assets/hockey.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/assets/hockey.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/assets/jeanremy.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/assets/jeanremy.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/assets/lalique.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/assets/lalique.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/assets/lalique.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/assets/philoro.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/assets/philoro.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/clients/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/drawer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/map/Map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/map/Map.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/map/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/map/consts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/map/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/map/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/map/static.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/map/static.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/map/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/map/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/signup/SignupDrawer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/signup/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/adam.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/adam.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/audrey.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/audrey.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/claudia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/claudia.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/dimitri.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/dimitri.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/gabe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/gabe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/ilija.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/ilija.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/jacco.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/jacco.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/levy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/levy.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/linus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/linus.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/michael.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/michael.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/michele.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/michele.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/nadine.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/nadine.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/sarah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/sarah.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/schaeli.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/schaeli.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/sophie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/sophie.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/stefan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/stefan.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/tobias.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/tobias.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/assets/walid.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/walid.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/Team.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/card/TeamCard.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/card/TeamCard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/card/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/data.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/slider/TeamSlider.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/slider/TeamSlider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/slider/TeamSliderDesktop.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/slider/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/team_ref/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/intro-prose/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/intro-prose/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.old.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/Bg.old.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.old.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/Bg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/bg/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/bg/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/swipe-gallery.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button/Button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/sections/secondary/Secondary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/link/Link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/link/Link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/views/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/Team.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/gsap/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/gsap/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/hooks/useIsHome.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/hooks/useIsHome.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/clients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/clients.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/company.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/company.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/views",
+    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/lib/hooks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -112,11 +75,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib/hooks" />
       <recent name="$PROJECT_DIR$/src/components/views" />
       <recent name="$PROJECT_DIR$/src/components/common/clients/assets" />
       <recent name="$PROJECT_DIR$/public/images/app" />
       <recent name="$PROJECT_DIR$/src/components/common/team" />
-      <recent name="$PROJECT_DIR$/src/components/layout/bg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/views" />
@@ -162,7 +125,9 @@
       <workItem from="1696834532074" duration="32140000" />
       <workItem from="1696931496407" duration="31818000" />
       <workItem from="1697094301011" duration="20000" />
-      <workItem from="1697186765461" duration="7321000" />
+      <workItem from="1697186765461" duration="8576000" />
+      <workItem from="1697282949795" duration="314000" />
+      <workItem from="1697370104541" duration="17506000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -372,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696965834343</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="l">
+      <option name="closed" value="true" />
+      <created>1697205485332</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1697205485332</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

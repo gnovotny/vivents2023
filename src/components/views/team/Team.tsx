@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 import Text from '@/components/ui/text'
 import Title from '@/components/ui/title'
+import { flicker } from '@/lib/gsap'
 import { useMediaQuery } from '@/lib/hooks'
 import { down } from '@/lib/utils'
 
@@ -140,6 +141,7 @@ function MemberSlide({
 export default function Team({ className }: { className?: string }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const sliderContainerRef = useRef<HTMLDivElement>(null)
+  const sliderRef2 = useRef<HTMLDivElement>(null)
 
   const isSmall = useMediaQuery(down('lg'))
 
@@ -234,30 +236,45 @@ export default function Team({ className }: { className?: string }) {
     }
   }, [slider])
 
+  useEffect(() => {
+    if (!sliderDisabled || isSmall || !sliderRef2.current) return
+
+    const flickerTl = flicker(sliderRef2.current, 3)
+
+    return () => {
+      flickerTl.kill()
+    }
+  }, [sliderDisabled, isSmall, currentSlide])
+
   return (
     <section
       ref={sliderContainerRef}
       className={clsx('flex h-full flex-grow flex-col', className)}
     >
       <div
-        ref={sliderRef}
-        className={clsx(
-          'keen-slider relative flex h-full lg:h-auto lg:aspect-square w-full lg:w-3/5 flex-grow lg:flex-grow-0 overflow-hidden -lg:full-w-common'
-        )}
+        ref={sliderRef2}
+        className='flex flex-grow w-full h-full overflow-hidden lg:h-auto lg:aspect-square lg:w-3/5 lg:flex-grow-0 -lg:full-w-common'
       >
-        {members.map((member, index) => (
-          <MemberSlide
-            key={`member-slide-${index}`}
-            member={member}
-            active={index === currentSlide}
-            className={'keen-slider__slide'}
-            sliderDisabled={sliderDisabled}
-          />
-        ))}
+        <div
+          ref={sliderRef}
+          className={clsx('keen-slider relative flex w-full h-full')}
+        >
+          {members.map((member, index) => (
+            <MemberSlide
+              key={`member-slide-${index}`}
+              member={member}
+              active={index === currentSlide}
+              className={'keen-slider__slide'}
+              sliderDisabled={sliderDisabled}
+            />
+          ))}
+        </div>
       </div>
-
       <div className='lg:hidden'>
-        <MemberLabel member={members[currentSlide]} withGroup />
+        <MemberLabel
+          member={members[currentSlide]}
+          withGroup
+        />
       </div>
 
       {/*<SwiperNumbers*/}
@@ -266,7 +283,7 @@ export default function Team({ className }: { className?: string }) {
       {/*  activeIndex={currentSlide}*/}
       {/*  setCurrentSlide={(slide: number) => slider.current?.moveToIdx(slide)}*/}
       {/*/>*/}
-      <div className='flex-col hidden lg:flex flex-grow justify-evenly'>
+      <div className='flex-col flex-grow hidden lg:flex justify-evenly'>
         <MemberGroup
           id='core'
           members={coreMembers}

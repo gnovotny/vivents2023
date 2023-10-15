@@ -1,20 +1,40 @@
 import React from 'react'
 
-import { AppProps } from 'next/app'
-
 import ContactButton from '@/components/common/contact-button'
-import { Prose } from '@/components/ui'
-import Title from '@/components/ui/title'
+import { Text, Title } from '@/components/ui'
+import { useIsHome, useMediaQuery } from '@/lib/hooks'
+import useFlickerReveal from '@/lib/hooks/useFlickerReveal'
+import { useStore } from '@/lib/store'
+import { down } from '@/lib/utils'
 
-const AppPage = ({ pageProps }: AppProps) => {
+const AppPage = () => {
+  const { finishIntroProse, introVideoComplete } = useStore()
+  const isHome = useIsHome()
+  const isSmall = useMediaQuery(down('lg'))
+  const ref = useFlickerReveal({
+    // flickerFrames: 115,
+    active: introVideoComplete || (!isHome && !isSmall),
+    childNodes: true,
+    stDuration: 0.14,
+    stStagger: 0.01,
+    // onComplete: ,
+  })
+
   return (
     <div className='flex flex-col items-end justify-between w-full h-full'>
       <div className='flex flex-col w-full'>
-        <Prose
-          html={`The VIVENTS Marketplace is a gamechanger in social e-commerce, specializing in Trading art, luxury, fashion, and digital collectibles. We connect today's and tomorrow's most sought-after sellers and buyers.
+        <Text>
+          The VIVENTS Marketplace is a gamechanger in social e-commerce, specializing in Trading art, luxury, fashion,
+          and digital collectibles. We connect today's and tomorrow's most sought-after sellers and buyers.
+          <br />
+          <br />
+        </Text>
+        <Text>
+          VIVENTS empowers social interactions and offers a suite of tools that increase operational transparency and
+          efficiency while scaling your community. We're not just another platform; we're redefining value exchange and
+          access.
+        </Text>
 
-VIVENTS empowers social interactions and offers a suite of tools that increase operational transparency and efficiency while scaling your community. We're not just another platform; we're redefining value exchange and access.`}
-        />
         <div className='flex flex-col gap-3 pt-common'>
           <Title>Available on</Title>
           <div className='flex flex-row items-center gap-2 '>
@@ -24,6 +44,7 @@ VIVENTS empowers social interactions and offers a suite of tools that increase o
               rel='noopener noreferrer'
               className='cursor-pointer'
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src='/images/app/apple-store.svg'
                 alt='apple-store'
@@ -36,6 +57,7 @@ VIVENTS empowers social interactions and offers a suite of tools that increase o
               target='_blank'
               rel='noopener noreferrer'
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src='/images/app/google-store.svg'
                 alt='google-store'

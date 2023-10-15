@@ -14,7 +14,7 @@ type PrimaryProps = PropsWithChildren<{
 
 const Secondary = ({ pageProps, children }: PrimaryProps) => {
   const isHome = useIsHome()
-  const { introComplete } = useStore()
+  const { introVideoComplete } = useStore()
   return (
     <section
       className={clsx(
@@ -30,7 +30,7 @@ const Secondary = ({ pageProps, children }: PrimaryProps) => {
           // '!opacity-0': !introComplete, // TODO
         })}
       >
-        <IntroProse />
+        <IntroProse animateOnce />
       </div>
       <Footer pageProps={pageProps} />
     </section>

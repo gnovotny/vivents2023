@@ -2,7 +2,6 @@ import { Fragment, ReactNode } from 'react'
 
 import { Dialog, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-import { usePathname } from 'next/navigation'
 
 import XSVG from '@/components/icons/x.svg'
 
@@ -25,8 +24,6 @@ const overlayTransitionProps = {
 }
 
 export default function Drawer({ title = '', description = '', children, isOpen, onClose, blurOverlay }: DrawerProps) {
-  const pathname = usePathname()
-
   return (
     <Transition.Root
       show={isOpen}
@@ -39,7 +36,7 @@ export default function Drawer({ title = '', description = '', children, isOpen,
       >
         <Transition.Child
           as={Fragment}
-          {...(pathname === '/company' ? overlayTransitionProps : {})}
+          {...(blurOverlay ? overlayTransitionProps : {})}
         >
           <Dialog.Overlay
             className={clsx('relative flex flex-col justify-end w-full h-full lg:justify-center lg:items-center')}

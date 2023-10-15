@@ -15,6 +15,7 @@ export type LinkProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyo
   } & React.RefAttributes<HTMLAnchorElement> & {
     underlined?: boolean
     isActive?: boolean
+    isMounted?: boolean
     lineProps?: LinkLineProps
   }
 
