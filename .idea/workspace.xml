@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/base.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
       <workItem from="1697094301011" duration="20000" />
       <workItem from="1697186765461" duration="8576000" />
       <workItem from="1697282949795" duration="314000" />
-      <workItem from="1697370104541" duration="19019000" />
+      <workItem from="1697370104541" duration="20474000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -333,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697390438557</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="l">
+      <option name="closed" value="true" />
+      <created>1697391938662</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1697391938662</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -30,20 +30,24 @@ const NAV_ITEMS = [
   { name: 'Contact', href: '/contact', className: 'lg:hidden' },
 ]
 
-const NavItem = ({ children, className, isActive, isMounted, ...props }: LinkProps) => (
-  <Link
-    className={clsx(
-      'uppercase thinner leading-none px-4 py-2 lg:py-3 h-common border rounded-xl border-transparent transition-colors duration-300',
-      {
-        'hover:border-primary': isMounted,
-        '!border-primary ': isActive && isMounted,
-      },
-      className
-    )}
-    {...props}
-  >
-    {children}
-  </Link>
+const NavItem = ({ children, className, isActive, isMounted, index, ...props }: LinkProps & { index?: number }) => (
+  <div className={clsx('lg:flex lg:flex-1 lg:w-full', className, {
+    'lg:justify-center': index === 1,
+    'lg:justify-end': index === 2,
+  })}>
+    <Link
+      className={clsx(
+        'uppercase thinner leading-none px-4 py-2 lg:py-3 h-common border rounded-xl border-transparent transition-colors duration-300',
+        {
+          'hover:border-primary': isMounted,
+          '!border-primary ': isActive && isMounted,
+        }
+      )}
+      {...props}
+    >
+      {children}
+    </Link>
+  </div>
 )
 
 const Header = ({ pageProps, className }: HeaderProps) => {
@@ -64,7 +68,7 @@ const Header = ({ pageProps, className }: HeaderProps) => {
     active: introProseComplete || (!isHome && isSmall),
     delay: !isHome && isSmall ? 1 : 0,
     once: true,
-    onComplete: () => setNavAnimationComplete(true)
+    onComplete: () => setNavAnimationComplete(true),
   })
 
   return (
@@ -80,15 +84,16 @@ const Header = ({ pageProps, className }: HeaderProps) => {
         {/*-mt-2 -ml-4 lg:-mt-3 w-[calc(100%+2rem)]*/}
         <nav
           ref={navRef}
-          className='flex justify-between -mt-2 text-xs w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-base opacity-0'
+          className='flex flex-row justify-between -mt-2 text-xs opacity-0 lg:justify-start w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-base'
         >
-          {NAV_ITEMS.map(({ name, href, className }) => (
+          {NAV_ITEMS.map(({ name, href, className }, index) => (
             <NavItem
               key={name}
               href={href}
               className={className}
               isActive={href === pathname || (!isSmall && href === '/company' && pathname === '/contact')}
               isMounted={navAnimationComplete}
+              index={index}
             >
               {name}
             </NavItem>
