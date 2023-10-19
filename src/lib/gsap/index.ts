@@ -5,7 +5,7 @@ gsap.registerPlugin(SplitText)
 
 export { gsap, SplitText }
 
-export const flicker = (element: HTMLElement, frames = 15, delay = 0, xFactor = 0, yFactor = 0) => {
+export const flicker = (element: HTMLElement, frames = 15, delay = 0, onComplete = () => {}, xFactor = 0, yFactor = 0) => {
   const tl = gsap.timeline()
 
   if (delay) {
@@ -20,5 +20,9 @@ export const flicker = (element: HTMLElement, frames = 15, delay = 0, xFactor = 
   })
 
   tl.set(element, { opacity: 1, xPercent: 0, yPercent: 0 })
+
+  tl.then(() => {
+    onComplete?.()
+  })
   return tl
 }

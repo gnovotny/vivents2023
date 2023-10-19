@@ -12,6 +12,7 @@ type FlickerRevealProps = {
   // selector?: string
   childNodes?: boolean
   once?: boolean
+  split?: boolean
   onComplete?: () => void
 }
 
@@ -25,6 +26,7 @@ export default function useFlickerReveal({
   childStagger,
   onComplete,
   once = false,
+  split = false,
 }: FlickerRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -45,43 +47,47 @@ export default function useFlickerReveal({
     // const elements = selector ? ref.current.querySelectorAll(selector) : [ref.current]
     const elements = childNodes ? Array.from(ref.current.children) : [ref.current]
 
-    const stTL = gsap.timeline()
-
-    if (delay) {
-      stTL.delay(1)
-    }
-
     let totalTime = 0
+    let stTL: gsap.core.Timeline
+    let splitTexts: any[]
 
-    const splitTexts = elements
-      .filter((elem) => getComputedStyle(elem).display !== 'none')
-      .map((elem) => {
-        const splitText = new SplitText(elem, { type: 'chars, words' })
-        const time = splitText.chars.length * stStagger
-        totalTime += time
-        stTL.from(
-          splitText.chars,
-          { duration: stDuration, opacity: 0, stagger: stStagger, ease: 'power1.in' },
-          childStagger ?? `>-${time / 2}`
-        )
-        return splitText
-      })
-
-    const flickerTl = flicker(ref.current, flickerFrames ?? totalTime * 15 * 3, delay) // * 3 for good measure to account for randomness
+    const flickerTl = flicker(ref.current, flickerFrames ?? (split ? totalTime * 15 * 3 : 20), delay, !split ? onComplete : undefined) // * 3 for good measure to account for randomness
 
     let killFlickerTimeout: NodeJS.Timeout | undefined
 
-    stTL.then(() => {
-      executionCountRef.current++
-      onComplete?.()
+    if (split) {
+      stTL = gsap.timeline()
 
-      if (!flickerFrames) {
-        killFlickerTimeout = setTimeout(() => {
-          flickerTl.kill()
-          gsap.set(ref.current, { opacity: 1 })
-        }, 100)
+      if (delay) {
+        stTL.delay(delay)
       }
-    })
+
+      splitTexts = elements
+        .filter((elem) => getComputedStyle(elem).display !== 'none')
+        .map((elem) => {
+          const splitText = new SplitText(elem, { type: 'chars, words' })
+          const time = splitText.chars.length * stStagger
+          totalTime += time
+          stTL.from(
+            splitText.chars,
+            { duration: stDuration, opacity: 0, stagger: stStagger, ease: 'power1.in' },
+            childStagger ?? `>-${time / 2}`
+          )
+          return splitText
+        })
+
+      stTL.then(() => {
+        executionCountRef.current++
+        onComplete?.()
+
+        if (!flickerFrames) {
+          killFlickerTimeout = setTimeout(() => {
+            flickerTl.kill()
+            gsap.set(ref.current, { opacity: 1 })
+          }, 100)
+        }
+      })
+    }
 
     return () => {
       if (executionCountRef.current > 0) return
@@ -93,8 +99,8 @@ export default function useFlickerReveal({
       if (ref.current && once) {
         gsap.set(ref.current, { opacity: 0 })
       }
-      splitTexts.forEach((splitText) => splitText.revert())
-      stTL.kill()
+      splitTexts?.forEach((splitText) => splitText.revert())
+      stTL?.kill()
     }
   }, [/*ref.current, */ active])
 

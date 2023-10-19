@@ -2,30 +2,38 @@ import React from 'react'
 
 import ContactButton from '@/components/common/contact-button'
 import { Text, Title } from '@/components/ui'
-import { useIsHome, useMediaQuery } from '@/lib/hooks'
+import { useMediaQuery } from '@/lib/hooks'
 import useFlickerReveal from '@/lib/hooks/useFlickerReveal'
 import { useStore } from '@/lib/store'
 import { down } from '@/lib/utils'
 
 const AppPage = () => {
   const { introProseComplete } = useStore()
-  const isHome = useIsHome()
   const isSmall = useMediaQuery(down('lg'))
   const textRef = useFlickerReveal({
     // flickerFrames: 115,
-    active: introProseComplete || (!isHome && isSmall),
+    active: introProseComplete || isSmall,
     childNodes: true,
     childStagger: '>0.3',
     stDuration: 0.14,
     stStagger: 0.0075,
-    delay: !isHome && isSmall ? 1 : 0,
+    delay: isSmall ? 1 : 0,
     // onComplete: ,
+  })
+
+  const buttonsRef = useFlickerReveal({
+    active: introProseComplete || isSmall,
+    delay: isSmall ? 1.5 : 0.5,
+    split: false,
   })
 
   return (
     <div className='flex flex-col items-end justify-between w-full h-full'>
       <div className='flex flex-col w-full'>
-        <div ref={textRef} className='opacity-0'>
+        <div
+          ref={textRef}
+          className='opacity-0'
+        >
           <Text>
             The VIVENTS Marketplace is a gamechanger in social e-commerce, specializing in Trading art, luxury, fashion,
             and digital collectibles. We connect today's and tomorrow's most sought-after sellers and buyers.
@@ -34,12 +42,15 @@ const AppPage = () => {
           </Text>
           <Text>
             VIVENTS empowers social interactions and offers a suite of tools that increase operational transparency and
-            efficiency while scaling your community. We're not just another platform; we're redefining value exchange and
-            access.
+            efficiency while scaling your community. We're not just another platform; we're redefining value exchange
+            and access.
           </Text>
         </div>
 
-        <div className='flex flex-col gap-3 pt-common'>
+        <div
+          ref={buttonsRef}
+          className='flex flex-col opacity-0 gap-3 pt-common'
+        >
           <Title>Available on</Title>
           <div className='flex flex-row items-center gap-2 '>
             <a

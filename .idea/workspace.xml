@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
-      <change afterPath="$PROJECT_DIR$/src/components/views/clients/assets/philoro.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button/Button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/title.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/clients/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/team/data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/data.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/views/team/assets/audrey.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/assets/audrey.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/gsap/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/gsap/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/hooks/useFlickerReveal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/hooks/useFlickerReveal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,7 @@
       <workItem from="1697625292582" duration="150000" />
       <workItem from="1697626848335" duration="635000" />
       <workItem from="1697627490532" duration="7000" />
-      <workItem from="1697722866777" duration="2557000" />
+      <workItem from="1697722866777" duration="4591000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -360,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697393543687</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="l">
+      <option name="closed" value="true" />
+      <created>1697725477097</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1697725477097</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
