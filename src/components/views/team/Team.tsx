@@ -4,6 +4,8 @@ import clsx from 'clsx'
 import { useKeenSlider } from 'keen-slider/react'
 import Image from 'next/image'
 
+import ArrowSVG from '@/components/icons/arrow-right-short.svg'
+import { Button } from '@/components/ui'
 import Text from '@/components/ui/text'
 import Title from '@/components/ui/title'
 import { flicker, gsap } from '@/lib/gsap'
@@ -36,7 +38,7 @@ function MemberLabel({
   active?: boolean
 }) {
   return (
-    <div className={clsx('block w-full pb-4 pt-10 lg:py-0', className)}>
+    <div className={clsx('block w-full', className)}>
       <div className={clsx('flex flex-col gap-2')}>
         {withGroup && <Title>{renderGroup(member.group)}</Title>}
         <div className='flex flex-col gap-1 lg:flex-row lg:items-end lg:gap-2'>
@@ -271,11 +273,24 @@ export default function Team({ className }: { className?: string }) {
           ))}
         </div>
       </div>
-      <div className='lg:hidden'>
+      <div className='flex flex-row justify-between pt-10 pb-4 lg:hidden'>
         <MemberLabel
           member={members[currentSlide]}
           withGroup
         />
+        <Button
+          Component='a'
+          href={members[currentSlide].email ? `mailto:${members[currentSlide].email}` : undefined}
+          className={clsx(
+            'lg:!min-w-[8.5rem] lg:px-7 whitespace-nowrap opacity-0 transition-opacity duration-300 pointer-events-none',
+            {
+              '!opacity-100 !pointer-events-auto': members[currentSlide].email,
+            }
+          )}
+        >
+          <span>Mail</span>
+          <ArrowSVG className={clsx('inline-block w-3 h-auto ml-1')} />
+        </Button>
       </div>
 
       {/*<SwiperNumbers*/}

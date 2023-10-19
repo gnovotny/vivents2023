@@ -7,7 +7,13 @@ type TitleProps = PropsWithChildren<{
 }>
 
 const Title: FunctionComponent<TitleProps> = ({ children, className }) => {
-  return <div className={clsx('uppercase text-sm leading-[1.05] text-[#d0d0d0] tracking-[-0.01em]', className)}>[{children}]</div>
+  return (
+    <div className={clsx('uppercase text-sm leading-[1.05] text-[#d0d0d0] tracking-[-0.01em] ml-[-0.1em]', className)}>
+      <span>[</span>
+      {children}
+      <span>]</span>
+    </div>
+  )
 }
 
 export default Title

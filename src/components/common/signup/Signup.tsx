@@ -78,7 +78,7 @@ const Signup: FC<SignupProps> = ({ onSubmit: parentOnSubmit, className }) => {
           disabled={isJoining}
           //
           className={clsx(
-            'block w-full p-2 text-xs uppercase bg-transparent border rounded-lg lg:p-4 lg:text-sm h-common lg:rounded-xl border-primary focus:border-primary focus:ring-primary focus-visible:outline-tertiary',
+            'block w-full p-2 text-xs uppercase bg-transparent border rounded-xl lg:p-4 lg:text-sm h-common lg:rounded-xl border-primary focus:border-primary focus:ring-primary focus-visible:outline-tertiary',
             {
               hidden: isJoined,
             }

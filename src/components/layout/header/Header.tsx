@@ -106,7 +106,7 @@ const Header = ({ pageProps, className }: HeaderProps) => {
         >
           <div
             className={clsx('transition-[transform,opacity] duration-200 will-change-[opacity,transform]', {
-              '-translate-x-4': pathname === '/company',
+              // '-translate-x-4': pathname === '/company',
               'opacity-0': isHome,
             })}
           >

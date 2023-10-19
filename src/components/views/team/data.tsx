@@ -24,6 +24,7 @@ import walid from './assets/walid.jpg'
 export type Member = {
   group: string
   name: string
+  email?: string
   position?: ReactNode | string
   image: Omit<ImageProps, 'alt'> & {
     alt?: string
@@ -34,6 +35,7 @@ export const coreMembers: Member[] = [
   {
     group: 'core',
     name: 'Sarah Schlagenhauf',
+    email: 'sarah@artdeal.ch',
     position: <>CEO & CO-FOUNDER</>,
     image: {
       src: sarah,
@@ -42,6 +44,7 @@ export const coreMembers: Member[] = [
   {
     group: 'core',
     name: 'Adam Mann',
+    email: 'adam@artdeal.ch',
     position: <>CSO & CO-FOUNDER</>,
     image: {
       src: adam,
@@ -51,6 +54,7 @@ export const coreMembers: Member[] = [
   {
     group: 'core',
     name: 'Linus Inderbitzin',
+    email: 'linus@artdeal.ch',
     position: 'CTO',
     image: {
       src: linus,
@@ -59,6 +63,7 @@ export const coreMembers: Member[] = [
   {
     group: 'core',
     name: 'Ilija Gautschi',
+    email: 'ilija@artdeal.ch',
     position: 'Art Director',
     image: {
       src: ilija,
@@ -68,6 +73,7 @@ export const coreMembers: Member[] = [
   {
     group: 'core',
     name: 'Walid El Barbir',
+    email: 'walid@artdeal.ch',
     position: 'Head of Design',
     image: {
       src: walid,
@@ -77,6 +83,7 @@ export const coreMembers: Member[] = [
   {
     group: 'core',
     name: 'AUDREY RAPPOLD',
+    email: 'audrey@artdeal.ch',
     position: 'GRAPHIC DESIGN',
     image: {
       src: audrey,
@@ -95,6 +102,7 @@ export const coreMembers: Member[] = [
   {
     group: 'core',
     name: 'Jacco Prüsmann',
+    email: 'mail@artdeal.ch',
     position: 'Copywriter',
     image: {
       src: jacco,
@@ -104,6 +112,7 @@ export const coreMembers: Member[] = [
   {
     group: 'core',
     name: 'Gabe Novotny',
+    email: 'mail@artdeal.ch',
     position: 'Fullstack Developer',
     image: {
       src: gabe,

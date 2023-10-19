@@ -3,9 +3,9 @@
   h-[var(--common-height-xs)] lg:h-[var(--common-height-lg)] px-5 py-0 leading-none transition-all ease-in-out duration-500
   text-center justify-center
   items-center
-  tracking-wide  rounded-lg lg:rounded-xl
+  tracking-wide  rounded-xl lg:rounded-xl
    shadow-[none] outline-none
-  backdrop-blur !bg-tertiary -lg:text-sm;
+  backdrop-blur !bg-tertiary -lg:text-xs;
 }
 
 .root:hover {

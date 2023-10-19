@@ -5,90 +5,88 @@ import BuchererSVG from './assets/bucherer.svg'
 import HockeySVG from './assets/hockey.svg'
 import JeanRemySVG from './assets/jeanremy.svg'
 import LaliquePNG from './assets/lalique.png'
-import LaliqueSVG from './assets/lalique.svg'
-import PhiloroSVG from './assets/philoro.svg'
+import PhiloroPNG from './assets/philoro.png'
+import { useMediaQuery } from '@/lib/hooks'
+import { down } from '@/lib/utils'
+import { useEffect, useState } from 'react'
 
 const CLIENTS = [
   {
     name: 'Lalique',
-    // src: '/images/clients/lalique.svg',
-    // SVG: LaliqueSVG,
-    svg: <LaliqueSVG className='w-24 h-auto' />,
+    // svg: <LaliqueSVG className='w-24 h-auto' />,
+    img: (
+      <Image
+        src={LaliquePNG}
+        alt={'Lalique'}
+        className='w-24 h-auto'
+      />
+    ),
     href: 'https://lesmuses.lalique.com',
     text: '+',
   },
   {
     name: 'Bucherer',
-    // src: '/images/clients/bucherer.svg',
-    // SVG: BuchererSVG,
-    svg: <BuchererSVG className='h-auto w-36' />,
+    img: <BuchererSVG className='h-auto w-36' />,
     href: 'https://bucherer.ch',
     text: '+',
   },
   {
     name: 'Philoro',
-    // src: '/images/clients/philoro.svg',
-    // SVG: PhiloroSVG,
-    svg: <PhiloroSVG className='h-auto w-28' />,
+    // svg: <PhiloroSVG className='h-auto w-28' />,
+    img: (
+      <Image
+        src={PhiloroPNG}
+        alt={'Philoro'}
+        className='h-auto w-28'
+      />
+    ),
     href: 'https://www.cryptovreneli.ch',
     text: '+',
   },
   {
     name: 'Swiss Ice Hockey',
-    // src: '/images/clients/hockey.svg',
-    // SVG: HockeySVG,
-    svg: <HockeySVG className='w-12 h-auto lg:ml-8' />,
+    img: <HockeySVG className='w-12 h-auto lg:ml-8' />,
     text: <span className='uppercase text-[0.5rem] thinner'>Coming soon</span>,
   },
   {
     name: 'Jean-Remy',
-    // src: '/images/clients/jeanremy.svg',
-    // SVG: JeanRemySVG,
-    svg: <JeanRemySVG className='w-32 h-auto' />,
+    img: <JeanRemySVG className='w-32 h-auto' />,
     href: 'https://www.lifetimesculptures.com',
     text: '+',
   },
 ]
 
-const Client = ({ name, href, svg, text }: any) => (
+const Client = ({ name, href, img, text, target }: any) => (
   <a
     title={name}
     href={href}
-    target='_blank'
+    target={target}
     className={clsx('flex flex-col justify-center w-full h-full', {
       'pointer-events-none': !href,
     })}
   >
     <div className='flex flex-row items-center justify-between w-full h-full'>
       <div className='hidden lg:block' />
-      {/*<Image*/}
-      {/*  width={100}*/}
-      {/*  height={50}*/}
-      {/*  src={src}*/}
-      {/*  alt={name}*/}
-      {/*/>*/}
-      {/*<SVG />*/}
-      {/*{svg}*/}
-      {name === 'Lalique' ? (
-        <Image
-          src={LaliquePNG}
-          alt={'Lalique'}
-          className='w-24 h-auto'
-        />
-      ) : (
-        svg
-      )}
+      {img}
       <div className='text-right'>{text}</div>
     </div>
   </a>
 )
 
 const Clients = () => {
+  const [target, setTarget] = useState<'_blank' | undefined>('_blank')
+  const isVerySmall = useMediaQuery(down('md'))
+
+  useEffect(() => {
+    setTarget(isVerySmall ? undefined : '_blank')
+  }, [isVerySmall])
+
   return (
-    <div className='flex flex-col w-full h-full lg:max-h-[60vh] border-y lg:border-t-0 border-[#d6d6d6]  divide-y divide-[#d6d6d6]'>
+    <div className='flex flex-col w-full h-full lg:max-h-[60vh] border-y lg:border-t-0 border-[#d6d6d6] divide-y divide-[#d6d6d6]'>
       {CLIENTS.map((props, index) => (
         <Client
           key={index}
+          target={target}
           {...props}
         />
       ))}

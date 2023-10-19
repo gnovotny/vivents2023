@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
+      <change afterPath="$PROJECT_DIR$/src/components/views/clients/assets/philoro.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/signup/Signup.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button/Button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/views/clients/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/clients/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/views/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/Team.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/views/team/data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/data.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/lib/hooks",
+    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/src/components/views/clients/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,11 +61,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/views/clients/assets" />
       <recent name="$PROJECT_DIR$/src/lib/hooks" />
       <recent name="$PROJECT_DIR$/src/components/views" />
       <recent name="$PROJECT_DIR$/src/components/common/clients/assets" />
       <recent name="$PROJECT_DIR$/public/images/app" />
-      <recent name="$PROJECT_DIR$/src/components/common/team" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/views" />
@@ -107,7 +113,12 @@
       <workItem from="1697094301011" duration="20000" />
       <workItem from="1697186765461" duration="8576000" />
       <workItem from="1697282949795" duration="314000" />
-      <workItem from="1697370104541" duration="20474000" />
+      <workItem from="1697370104541" duration="21250000" />
+      <workItem from="1697623173166" duration="412000" />
+      <workItem from="1697625292582" duration="150000" />
+      <workItem from="1697626848335" duration="635000" />
+      <workItem from="1697627490532" duration="7000" />
+      <workItem from="1697722866777" duration="2557000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -341,7 +352,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697391938662</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="l">
+      <option name="closed" value="true" />
+      <created>1697393543687</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1697393543687</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
