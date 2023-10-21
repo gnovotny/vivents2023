@@ -3,9 +3,9 @@ import type { FunctionComponent } from 'react'
 import clsx from 'clsx'
 
 import { Text } from '@/components/ui'
+import { useIsHome, useMediaQuery } from '@/lib/hooks'
 import useFlickerReveal from '@/lib/hooks/useFlickerReveal'
 import { useStore } from '@/lib/store'
-import { useIsHome, useMediaQuery } from '@/lib/hooks'
 import { down } from '@/lib/utils'
 
 interface IntroProseProps {
@@ -18,22 +18,24 @@ const textClassName = '-lg:text-[0.8rem]'
 const IntroProse: FunctionComponent<IntroProseProps> = ({ className, animateOnce = false }) => {
   const { finishIntroProse, introVideoComplete } = useStore()
   const isHome = useIsHome()
-  const isSmall = useMediaQuery(down('lg'))
+  // const isSmall = useMediaQuery(down('lg'))
   const ref = useFlickerReveal({
     // flickerFrames: 115,
-    active: introVideoComplete || (!isHome && !isSmall),
+    active: introVideoComplete && isHome,
     childNodes: true,
     stDuration: 0.14,
     stStagger: 0.01,
     onComplete: finishIntroProse,
     once: animateOnce,
-    delay: !isHome && !isSmall ? 1 : 0,
+    // delay: !isHome && !isSmall ? 1 : 0,
   })
 
   return (
     <div
       ref={ref}
-      className='opacity-0'
+      className={clsx('transition-opacity duration-300', {
+        'opacity-0': isHome && !introVideoComplete,
+      })}
     >
       <Text className={textClassName}>
         Vivents champions tech and design innovations, transforming both customer experiences and business landscapes

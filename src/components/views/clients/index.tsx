@@ -32,7 +32,7 @@ const CLIENTS = [
   },
   {
     name: 'Philoro',
-    // svg: <PhiloroSVG className='h-auto w-28' />,
+    // img: <PhiloroSVG className='h-auto w-28' />,
     img: (
       <Image
         src={PhiloroPNG}

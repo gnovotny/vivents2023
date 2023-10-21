@@ -31,10 +31,12 @@ const NAV_ITEMS = [
 ]
 
 const NavItem = ({ children, className, isActive, isMounted, index, ...props }: LinkProps & { index?: number }) => (
-  <div className={clsx('lg:flex lg:flex-1 lg:w-full', className, {
-    'lg:justify-center': index === 1,
-    'lg:justify-end': index === 2,
-  })}>
+  <div
+    className={clsx('lg:flex lg:flex-1 lg:w-full', className, {
+      'lg:justify-center': index === 1,
+      'lg:justify-end': index === 2,
+    })}
+  >
     <Link
       className={clsx(
         'uppercase thinner leading-none px-4 py-2 lg:py-3 h-common border rounded-xl border-transparent transition-colors duration-300',
@@ -63,10 +65,9 @@ const Header = ({ pageProps, className }: HeaderProps) => {
 
   const navRef = useFlickerReveal({
     childNodes: true,
-    // childStagger: '>0.05',
     childStagger: '>0.05',
-    active: introProseComplete || (!isHome && isSmall),
-    delay: !isHome && isSmall ? 1 : 0,
+    active: introProseComplete && isHome,
+    // delay: !isHome && isSmall ? 1 : 0,
     once: true,
     onComplete: () => setNavAnimationComplete(true),
   })
@@ -84,7 +85,12 @@ const Header = ({ pageProps, className }: HeaderProps) => {
         {/*-mt-2 -ml-4 lg:-mt-3 w-[calc(100%+2rem)]*/}
         <nav
           ref={navRef}
-          className='flex flex-row justify-between -mt-2 text-xs opacity-0 lg:justify-start w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-base'
+          className={clsx(
+            'flex flex-row justify-between -mt-2 text-xs lg:justify-start w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-base transition-opacity duration-300',
+            {
+              'opacity-0': isHome && !introProseComplete,
+            }
+          )}
         >
           {NAV_ITEMS.map(({ name, href, className }, index) => (
             <NavItem

@@ -6,7 +6,7 @@ export const INFO = {
   streetAddress2: '8004 Zürich',
   // tel: '044 760 30 10',
   email: 'mail@artdeal.ch',
-  instagramUrl: 'https://www.instagram.com/vivents_app/',
+  instagramUrl: 'https://www.instagram.com/vivents_zurich/',
   discordUrl: 'https://discord.gg/qhdEwvHvX3',
   linkedinUrl: 'https://linkedin.com/company/artdeal',
 }

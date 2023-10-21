@@ -238,16 +238,16 @@ export default function Team({ className }: { className?: string }) {
     }
   }, [slider])
 
-  useEffect(() => {
-    if (!sliderDisabled || isSmall || !sliderRef2.current) return
-
-    const flickerTl = flicker(sliderRef2.current, 3)
-
-    return () => {
-      flickerTl.kill()
-      gsap.set(sliderRef2.current, { opacity: 1 })
-    }
-  }, [sliderDisabled, isSmall, currentSlide])
+  // useEffect(() => {
+  //   if (!sliderDisabled || isSmall || !sliderRef2.current) return
+  //
+  //   const flickerTl = flicker(sliderRef2.current, 3)
+  //
+  //   return () => {
+  //     flickerTl.kill()
+  //     gsap.set(sliderRef2.current, { opacity: 1 })
+  //   }
+  // }, [sliderDisabled, isSmall, currentSlide])
 
   return (
     <section

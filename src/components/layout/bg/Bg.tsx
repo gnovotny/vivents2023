@@ -2,7 +2,6 @@ import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
 
 import clsx from 'clsx'
 
-import { flicker } from '@/lib/gsap'
 import { useIsHome } from '@/lib/hooks'
 import { useStore } from '@/lib/store'
 
@@ -44,22 +43,25 @@ const Bg = () => {
     }
   }, [])
 
-  useEffect(() => {
-    if ((!introVideoPlaying && !realIntroVideoComplete) || !rootRef.current) return
-
-    const flickerTl = flicker(rootRef.current, realIntroVideoComplete ? 15 : 30)
-
-    return () => {
-      flickerTl.kill()
-    }
-  }, [introVideoPlaying, realIntroVideoComplete])
+  // useEffect(() => {
+  //   if ((!introVideoPlaying && !realIntroVideoComplete) || !rootRef.current) return
+  //
+  //   const flickerTl = flicker(rootRef.current, realIntroVideoComplete ? 15 : 30)
+  //
+  //   return () => {
+  //     flickerTl.kill()
+  //   }
+  // }, [introVideoPlaying, realIntroVideoComplete])
 
   return (
     <div
       ref={rootRef}
-      className={clsx('fixed w-full h-full inset-0 pointer-events-none overflow-hidden opacity-0', {
-        // 'opacity-100': introVideoPlaying
-      })}
+      className={clsx(
+        'fixed w-full h-full inset-0 pointer-events-none overflow-hidden transition-opacity duration-700',
+        {
+          'opacity-0': !introVideoPlaying,
+        }
+      )}
     >
       <div className='relative w-full h-full'>
         <video

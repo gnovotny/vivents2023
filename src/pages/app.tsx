@@ -8,33 +8,33 @@ import { useStore } from '@/lib/store'
 import { down } from '@/lib/utils'
 
 const AppPage = () => {
-  const { introProseComplete } = useStore()
-  const [revealButtons, setRevealButtons] = useState(false)
-  const isSmall = useMediaQuery(down('lg'))
-  const textRef = useFlickerReveal({
-    // flickerFrames: 115,
-    active: introProseComplete || isSmall,
-    childNodes: true,
-    // childStagger: '>0.3',
-    stDuration: 0.14,
-    stStagger: 0.0075,
-    delay: isSmall ? 1 : 0,
-    onComplete: () => setRevealButtons(true),
-  })
-
-  const buttonsRef = useFlickerReveal({
-    active: (introProseComplete || isSmall) && revealButtons,
-    flickerFrames: 15,
-    // delay: isSmall ? 1.5 : 0.5,
-    split: false,
-  })
+  // const { introProseComplete } = useStore()
+  // const [revealButtons, setRevealButtons] = useState(false)
+  // const isSmall = useMediaQuery(down('lg'))
+  // const textRef = useFlickerReveal({
+  //   // flickerFrames: 115,
+  //   active: introProseComplete || isSmall,
+  //   childNodes: true,
+  //   // childStagger: '>0.3',
+  //   stDuration: 0.14,
+  //   stStagger: 0.0075,
+  //   delay: isSmall ? 1 : 0,
+  //   onComplete: () => setRevealButtons(true),
+  // })
+  //
+  // const buttonsRef = useFlickerReveal({
+  //   active: (introProseComplete || isSmall) && revealButtons,
+  //   flickerFrames: 15,
+  //   // delay: isSmall ? 1.5 : 0.5,
+  //   split: false,
+  // })
 
   return (
     <div className='flex flex-col items-end justify-between w-full h-full'>
       <div className='flex flex-col w-full'>
         <div
-          ref={textRef}
-          className='opacity-0'
+          // ref={textRef}
+          // className='opacity-0'
         >
           <Text>
             The VIVENTS Marketplace is a gamechanger in social e-commerce, specializing in Trading art, luxury, fashion,
@@ -50,8 +50,9 @@ const AppPage = () => {
         </div>
 
         <div
-          ref={buttonsRef}
-          className='flex flex-col opacity-0 gap-3 pt-common'
+          // ref={buttonsRef}
+          // opacity-0
+          className='flex flex-col gap-3 pt-common'
         >
           <Title>Available on</Title>
           <div className='flex flex-row items-center gap-2 '>

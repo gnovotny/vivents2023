@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-import { flicker, SplitText, gsap } from '@/lib/gsap'
+import { flicker as flickerFn, SplitText, gsap } from '@/lib/gsap'
 
 type FlickerRevealProps = {
   active?: boolean
@@ -13,6 +13,7 @@ type FlickerRevealProps = {
   childNodes?: boolean
   once?: boolean
   split?: boolean
+  flicker?: boolean
   onComplete?: () => void
 }
 
@@ -27,6 +28,7 @@ export default function useFlickerReveal({
   onComplete,
   once = false,
   split = true,
+  flicker = false,
 }: FlickerRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -40,7 +42,8 @@ export default function useFlickerReveal({
       !active ||
       !ref.current ||
       getComputedStyle(ref.current).display === 'none' ||
-      (once && executionCountRef.current > 0)
+      (once && executionCountRef.current > 0) ||
+      (!flicker && !split)
     )
       return
 
@@ -50,7 +53,8 @@ export default function useFlickerReveal({
     let totalTime = 0
     let stTL: gsap.core.Timeline
     let splitTexts: any[]
-
+    let flickerTl: gsap.core.Timeline
+    let killFlickerTimeout: NodeJS.Timeout | undefined
 
     if (split) {
       stTL = gsap.timeline()
@@ -68,24 +72,27 @@ export default function useFlickerReveal({
           stTL.from(
             splitText.chars,
             { duration: stDuration, opacity: 0, stagger: stStagger, ease: 'power1.in' },
-            index !== 0 ? (childStagger ?? `>-${time / 2}`) : undefined
+            index !== 0 ? childStagger ?? `>-${time / 2}` : undefined
           )
           return splitText
         })
     }
 
-    const flickerTl = flicker(ref.current, flickerFrames ?? (split ? totalTime * 15 * 3 : 20), delay, !split ? onComplete : undefined) // * 3 for good measure to account for randomness
-
-    let killFlickerTimeout: NodeJS.Timeout | undefined
-
+    if (flicker) {
+      flickerTl = flickerFn(
+        ref.current,
+        flickerFrames ?? (split ? totalTime * 15 * 3 : 20),
+        delay,
+        !split ? onComplete : undefined
+      ) // * 3 for good measure to account for randomness
+    }
 
     if (split) {
-
       stTL?.then(() => {
         executionCountRef.current++
         onComplete?.()
 
-        if (!flickerFrames) {
+        if (flicker && !flickerFrames) {
           killFlickerTimeout = setTimeout(() => {
             flickerTl.kill()
             gsap.set(ref.current, { opacity: 1 })
@@ -97,7 +104,7 @@ export default function useFlickerReveal({
     return () => {
       if (executionCountRef.current > 0) return
 
-      flickerTl.kill()
+      flickerTl?.kill()
       if (killFlickerTimeout) {
         clearTimeout(killFlickerTimeout)
       }

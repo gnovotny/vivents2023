@@ -16,7 +16,7 @@ type HeaderProps = {
 
 const Footer = ({ pageProps }: HeaderProps) => {
   const isHome = useIsHome()
-  const isSmall = useMediaQuery(down('lg'))
+  // const isSmall = useMediaQuery(down('lg'))
   const { introProseComplete } = useStore()
 
   const copyrightRef = useFlickerReveal({
@@ -25,8 +25,8 @@ const Footer = ({ pageProps }: HeaderProps) => {
     // stDuration: 0.14,
     // stStagger: 0.01,
     once: true,
-    active: introProseComplete || (!isHome && isSmall),
-    delay: !isHome && isSmall ? 1 : 0,
+    active: introProseComplete && isHome,
+    // delay: !isHome && isSmall ? 1 : 0,
   })
 
   return (
@@ -41,7 +41,9 @@ const Footer = ({ pageProps }: HeaderProps) => {
       </div>
       <div
         ref={copyrightRef}
-        className='opacity-0'
+        className={clsx('transition-opacity duration-300', {
+          'opacity-0': isHome && !introProseComplete,
+        })}
       >
         <Text
           className={clsx(
