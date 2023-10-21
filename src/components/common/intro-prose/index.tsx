@@ -24,6 +24,7 @@ const IntroProse: FunctionComponent<IntroProseProps> = ({ className, animateOnce
     // flickerFrames: 115,
     active: !introProseComplete && introVideoComplete && isHome,
     childNodes: true,
+    childStagger: `>-0.5`,
     stDuration: 0.14,
     stStagger: 0.0075,
     onComplete: finishIntroProse,
