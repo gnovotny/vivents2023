@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import ContactButton from '@/components/common/contact-button'
 import { Text, Title } from '@/components/ui'
@@ -9,21 +9,23 @@ import { down } from '@/lib/utils'
 
 const AppPage = () => {
   const { introProseComplete } = useStore()
+  const [revealButtons, setRevealButtons] = useState(false)
   const isSmall = useMediaQuery(down('lg'))
   const textRef = useFlickerReveal({
     // flickerFrames: 115,
     active: introProseComplete || isSmall,
     childNodes: true,
-    childStagger: '>0.3',
+    // childStagger: '>0.3',
     stDuration: 0.14,
     stStagger: 0.0075,
     delay: isSmall ? 1 : 0,
-    // onComplete: ,
+    onComplete: () => setRevealButtons(true),
   })
 
   const buttonsRef = useFlickerReveal({
-    active: introProseComplete || isSmall,
-    delay: isSmall ? 1.5 : 0.5,
+    active: (introProseComplete || isSmall) && revealButtons,
+    flickerFrames: 15,
+    // delay: isSmall ? 1.5 : 0.5,
     split: false,
   })
 

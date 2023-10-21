@@ -26,7 +26,8 @@ const IntroProse: FunctionComponent<IntroProseProps> = ({ className, animateOnce
     stDuration: 0.14,
     stStagger: 0.01,
     onComplete: finishIntroProse,
-    once: animateOnce
+    once: animateOnce,
+    delay: !isHome && !isSmall ? 1 : 0,
   })
 
   return (
