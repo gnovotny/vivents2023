@@ -13,7 +13,7 @@ const Bg = () => {
   // const loopVideoMobileRef = useRef<HTMLVideoElement>() as MutableRefObject<HTMLVideoElement>
   const isHome = useIsHome()
 
-  const { finishIntroVideo } = useStore()
+  const { finishIntroVideo, introVideoComplete } = useStore()
 
   const [introVideoPlaying, setIntroVideoPlaying] = useState(false)
   const [realIntroVideoComplete, setRealIntroVideoComplete] = useState(false)
@@ -27,13 +27,13 @@ const Bg = () => {
 
     let checkRemainingInterval: NodeJS.Timer | undefined = setInterval(() => {
       const timeLeft = video.duration - video.currentTime
-      if (timeLeft < 3) {
+      if (timeLeft < 5.5) {
         clearInterval(checkRemainingInterval)
         checkRemainingInterval = undefined
 
         finishIntroVideo()
       }
-    }, 1000)
+    }, 500)
 
     return () => {
       if (checkRemainingInterval) {
@@ -42,6 +42,12 @@ const Bg = () => {
       }
     }
   }, [])
+
+  useEffect(() => {
+    if (!isHome && !introVideoComplete) {
+      finishIntroVideo()
+    }
+  }, [isHome, introVideoComplete, finishIntroVideo])
 
   // useEffect(() => {
   //   if ((!introVideoPlaying && !realIntroVideoComplete) || !rootRef.current) return

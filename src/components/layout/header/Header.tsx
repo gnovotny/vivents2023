@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import clsx from 'clsx'
 import { AppProps } from 'next/app'
@@ -66,11 +66,17 @@ const Header = ({ pageProps, className }: HeaderProps) => {
   const navRef = useFlickerReveal({
     childNodes: true,
     childStagger: '>0.05',
-    active: introProseComplete && isHome,
+    active: introProseComplete && isHome && !navAnimationComplete,
     // delay: !isHome && isSmall ? 1 : 0,
     once: true,
     onComplete: () => setNavAnimationComplete(true),
   })
+
+  useEffect(() => {
+    if (!isHome && !navAnimationComplete) {
+      setNavAnimationComplete(true)
+    }
+  }, [isHome, navAnimationComplete])
 
   return (
     <header

@@ -7,6 +7,7 @@ import { useIsHome, useMediaQuery } from '@/lib/hooks'
 import useFlickerReveal from '@/lib/hooks/useFlickerReveal'
 import { useStore } from '@/lib/store'
 import { down } from '@/lib/utils'
+import { useEffect } from 'react'
 
 interface IntroProseProps {
   className?: string
@@ -16,25 +17,31 @@ interface IntroProseProps {
 const textClassName = '-lg:text-[0.8rem]'
 
 const IntroProse: FunctionComponent<IntroProseProps> = ({ className, animateOnce = false }) => {
-  const { finishIntroProse, introVideoComplete } = useStore()
+  const { finishIntroProse, introVideoComplete, introProseComplete } = useStore()
   const isHome = useIsHome()
   // const isSmall = useMediaQuery(down('lg'))
   const ref = useFlickerReveal({
     // flickerFrames: 115,
-    active: introVideoComplete && isHome,
+    active: !introProseComplete && introVideoComplete && isHome,
     childNodes: true,
     stDuration: 0.14,
-    stStagger: 0.01,
+    stStagger: 0.0075,
     onComplete: finishIntroProse,
     once: animateOnce,
     // delay: !isHome && !isSmall ? 1 : 0,
   })
 
+  useEffect(() => {
+    if (!isHome && !introProseComplete) {
+      finishIntroProse()
+    }
+  }, [finishIntroProse, introProseComplete, isHome])
+
   return (
     <div
       ref={ref}
       className={clsx('transition-opacity duration-300', {
-        'opacity-0': isHome && !introVideoComplete,
+        'opacity-0': isHome && !introVideoComplete && !introProseComplete,
       })}
     >
       <Text className={textClassName}>

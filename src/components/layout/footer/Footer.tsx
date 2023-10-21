@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import clsx from 'clsx'
 import { AppProps } from 'next/app'
@@ -18,6 +18,8 @@ const Footer = ({ pageProps }: HeaderProps) => {
   const isHome = useIsHome()
   // const isSmall = useMediaQuery(down('lg'))
   const { introProseComplete } = useStore()
+  const [footerAnimationComplete, setFooterAnimationComplete] = useState(false)
+
 
   const copyrightRef = useFlickerReveal({
     // flickerFrames: 115,
@@ -25,9 +27,15 @@ const Footer = ({ pageProps }: HeaderProps) => {
     // stDuration: 0.14,
     // stStagger: 0.01,
     once: true,
-    active: introProseComplete && isHome,
+    active: introProseComplete && isHome && !footerAnimationComplete,
     // delay: !isHome && isSmall ? 1 : 0,
   })
+
+  useEffect(() => {
+    if (!isHome && !footerAnimationComplete) {
+      setFooterAnimationComplete(true)
+    }
+  }, [footerAnimationComplete, isHome])
 
   return (
     <footer
