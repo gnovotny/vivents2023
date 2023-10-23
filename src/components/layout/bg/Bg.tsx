@@ -27,7 +27,7 @@ const Bg = () => {
 
     let checkRemainingInterval: NodeJS.Timer | undefined = setInterval(() => {
       const timeLeft = video.duration - video.currentTime
-      if (timeLeft < 6) {
+      if (timeLeft < 10) {
         clearInterval(checkRemainingInterval)
         checkRemainingInterval = undefined
 
