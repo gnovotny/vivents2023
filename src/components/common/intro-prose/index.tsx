@@ -24,11 +24,14 @@ const IntroProse: FunctionComponent<IntroProseProps> = ({ className, animateOnce
     // flickerFrames: 115,
     active: !introProseComplete && introVideoComplete && isHome,
     childNodes: true,
-    childStagger: `>-0.5`,
+    // childStagger: `>-0.5`,
+    childStagger: `>`,
     stDuration: 0.14,
-    stStagger: 0.0075,
+    // stStagger: 0.0075,
+    stStagger: 0.005,
     onComplete: finishIntroProse,
     once: animateOnce,
+    delay: 1,
     // delay: !isHome && !isSmall ? 1 : 0,
   })
 
@@ -41,7 +44,9 @@ const IntroProse: FunctionComponent<IntroProseProps> = ({ className, animateOnce
   return (
     <div
       ref={ref}
-      className={clsx('transition-opacity duration-300', {
+      className={clsx(
+        // 'transition-opacity duration-300',
+        {
         'opacity-0': isHome && !introVideoComplete && !introProseComplete,
       })}
     >
