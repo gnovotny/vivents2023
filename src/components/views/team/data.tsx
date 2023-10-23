@@ -99,16 +99,16 @@ export const coreMembers: Member[] = [
   //     // objectPosition: '50% 30%',
   //   },
   // },
-  {
-    group: 'core',
-    name: 'Jacco Prüsmann',
-    email: 'mail@artdeal.ch',
-    position: 'Copywriter',
-    image: {
-      src: jacco,
-      // objectPosition: '50% 30%',
-    },
-  },
+  // {
+  //   group: 'core',
+  //   name: 'Jacco Prüsmann',
+  //   email: 'mail@artdeal.ch',
+  //   position: 'Copywriter',
+  //   image: {
+  //     src: jacco,
+  //     // objectPosition: '50% 30%',
+  //   },
+  // },
   {
     group: 'core',
     name: 'Gabe Novotny',

@@ -8,7 +8,7 @@ import ArrowSVG from '@/components/icons/arrow-right-short.svg'
 import { Button } from '@/components/ui'
 import Text from '@/components/ui/text'
 import Title from '@/components/ui/title'
-import { flicker, gsap } from '@/lib/gsap'
+// import { flicker, gsap } from '@/lib/gsap'
 import { useMediaQuery } from '@/lib/hooks'
 import { down } from '@/lib/utils'
 
