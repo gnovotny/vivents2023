@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e38d9d9-7393-4cb8-a147-89971f38bd94" name="Changes" comment="l">
+      <change afterPath="$PROJECT_DIR$/public/docs/ROBB_Report.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/views/press/assets/bilanz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/views/press/assets/blick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/views/press/assets/nzz-bellevue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/views/press/assets/p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/views/press/assets/robb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/views/press/assets/srf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/views/press/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/press.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/team/data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/team/data.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/clients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/clients.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,37 +46,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/g/projects/artdeal/vivents2023/src/components/views/clients/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.css.dialects&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/g/projects/artdeal/vivents2023/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.chrome.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/g/projects/artdeal/vivents2023/public/docs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "settings.css.dialects",
+    "ts.external.directory.path": "/home/g/projects/artdeal/vivents2023/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/docs" />
+      <recent name="$PROJECT_DIR$/src/components/views" />
+      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/components/views/clients/assets" />
       <recent name="$PROJECT_DIR$/src/lib/hooks" />
-      <recent name="$PROJECT_DIR$/src/components/views" />
-      <recent name="$PROJECT_DIR$/src/components/common/clients/assets" />
-      <recent name="$PROJECT_DIR$/public/images/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/views/press/assets" />
       <recent name="$PROJECT_DIR$/src/components/views" />
       <recent name="$PROJECT_DIR$/src/components/common/team/assets" />
       <recent name="$PROJECT_DIR$/src/components/common/team" />
       <recent name="$PROJECT_DIR$/public/videos" />
-      <recent name="$PROJECT_DIR$/src/pages" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.chrome">
@@ -119,7 +131,8 @@
       <workItem from="1698043211208" duration="245000" />
       <workItem from="1698044021107" duration="1241000" />
       <workItem from="1698067522748" duration="35000" />
-      <workItem from="1698080891014" duration="238000" />
+      <workItem from="1698080891014" duration="318000" />
+      <workItem from="1702475995980" duration="4005000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <option name="closed" value="true" />
@@ -425,7 +438,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698044889250</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="l">
+      <option name="closed" value="true" />
+      <created>1698081143568</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1698081143568</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

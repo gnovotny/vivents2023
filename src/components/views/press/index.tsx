@@ -1,62 +1,95 @@
+import { useEffect, useState } from 'react'
+
 import clsx from 'clsx'
 import Image from 'next/image'
 
-import BuchererSVG from './assets/bucherer.svg'
-import HockeySVG from './assets/hockey.svg'
-import JeanRemySVG from './assets/jeanremy.svg'
-import LaliquePNG from './assets/lalique.png'
-import PhiloroPNG from './assets/philoro.png'
 import { useMediaQuery } from '@/lib/hooks'
 import { down } from '@/lib/utils'
-import { useEffect, useState } from 'react'
 
-const CLIENTS = [
+import bilanzPNG from './assets/bilanz.png'
+import blickPNG from './assets/blick.png'
+import nzzPNG from './assets/nzz-bellevue.png'
+import pPNG from './assets/p.png'
+import robbPNG from './assets/robb.png'
+import srfPNG from './assets/srf.png'
+
+const PRESS_ITEMS = [
   {
-    name: 'Lalique',
-    // svg: <LaliqueSVG className='w-24 h-auto' />,
+    name: 'Bilanz',
     img: (
       <Image
-        src={LaliquePNG}
-        alt={'Lalique'}
+        src={bilanzPNG}
+        alt={'Bilanz'}
         className='w-24 h-auto'
       />
     ),
-    href: 'https://lesmuses.lalique.com',
+    href: 'https://www.handelszeitung.ch/bilanz/bucherer-beteiligt-sich-an-kunst-startup',
     text: '+',
   },
   {
-    name: 'Bucherer',
-    img: <BuchererSVG className='h-auto w-36' />,
-    href: 'https://bucherer.ch',
-    text: '+',
-  },
-  {
-    name: 'Philoro',
-    // img: <PhiloroSVG className='h-auto w-28' />,
+    name: 'SRF',
     img: (
       <Image
-        src={PhiloroPNG}
-        alt={'Philoro'}
-        className='h-auto w-28'
+        src={srfPNG}
+        alt={'SRF'}
+        className='w-16 h-auto'
       />
     ),
-    href: 'https://www.cryptovreneli.ch',
+    href: 'https://www.srf.ch/play/tv/kulturplatz/video/kunstmarkt-neu-denken-art-deal?urn=urn:srf:video:50478e09-29b9-4417-9466-9738f0c68c1b',
     text: '+',
   },
   {
-    name: 'Swiss Ice Hockey',
-    img: <HockeySVG className='w-12 h-auto lg:ml-8' />,
-    text: <span className='uppercase text-[0.5rem] thinner'>Coming soon</span>,
+    name: 'Robb Report',
+    img: (
+      <Image
+        src={robbPNG}
+        alt={'Robb Report'}
+        className='w-36 h-auto'
+      />
+    ),
+    href: '/docs/ROBB_Report.pdf',
+    text: '+',
+    target: '_blank',
   },
   {
-    name: 'Jean-Remy',
-    img: <JeanRemySVG className='w-32 h-auto' />,
-    href: 'https://www.lifetimesculptures.com',
+    name: 'Blick',
+    img: (
+      <Image
+        src={blickPNG}
+        alt={'Blick'}
+        className='w-18 h-auto'
+      />
+    ),
+    href: 'https://www.blick.ch/wirtschaft/digital-und-faelschungssicher-schweizer-goldhaendler-bringt-das-krypto-vreneli-id18447000.html',
+    text: '+',
+  },
+  {
+    name: 'Persönlich',
+    img: (
+      <Image
+        src={pPNG}
+        alt={'Persönlich'}
+        className='w-12 h-auto'
+      />
+    ),
+    href: 'https://www.persoenlich.com/gesellschaft/meine-frau-mochte-die-uhr-nie',
+    text: '+',
+  },
+  {
+    name: 'NZZ Bellevue',
+    img: (
+      <Image
+        src={nzzPNG}
+        alt={'NZZ Bellevue'}
+        className='w-30 h-auto'
+      />
+    ),
+    href: 'https://bellevue.nzz.ch/uhren-schmuck/bucherer-uhren-und-schmuckbrand-arbeitet-mit-dem-startup-artdeal-zusammen-ld.1645753',
     text: '+',
   },
 ]
 
-const Client = ({ name, href, img, text, target }: any) => (
+const PressItem = ({ name, href, img, text, target }: any) => (
   <a
     title={name}
     href={href}
@@ -73,7 +106,7 @@ const Client = ({ name, href, img, text, target }: any) => (
   </a>
 )
 
-const Clients = () => {
+const Press = () => {
   const [target, setTarget] = useState<'_blank' | undefined>('_blank')
   const isVerySmall = useMediaQuery(down('md'))
 
@@ -83,8 +116,8 @@ const Clients = () => {
 
   return (
     <div className='flex flex-col w-full h-full lg:max-h-[60vh] border-y lg:border-t-0 border-[#d6d6d6] divide-y divide-[#d6d6d6]'>
-      {CLIENTS.map((props, index) => (
-        <Client
+      {PRESS_ITEMS.map((props, index) => (
+        <PressItem
           key={index}
           target={target}
           {...props}
@@ -94,4 +127,4 @@ const Clients = () => {
   )
 }
 
-export default Clients
+export default Press

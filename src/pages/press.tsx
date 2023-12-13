@@ -1,15 +1,15 @@
 import { AppProps } from 'next/app'
 
 import ContactButton from '@/components/common/contact-button'
-import Clients from 'src/components/views/clients'
+import Press from '@/components/views/press'
 
-const ClientsPage = ({ pageProps }: AppProps) => {
+const PressPage = ({ pageProps }: AppProps) => {
   return (
     <div className='flex flex-col items-end justify-between w-full h-full'>
-      <Clients />
+      <Press />
       <ContactButton className='hidden lg:inline-flex' />
     </div>
   )
 }
 
-export default ClientsPage
+export default PressPage

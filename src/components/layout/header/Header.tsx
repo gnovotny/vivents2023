@@ -27,19 +27,20 @@ const NAV_ITEMS = [
   { name: 'Company', href: '/company' },
   { name: 'Clients', href: '/clients' },
   { name: 'App', href: '/app' },
+  { name: 'Press', href: '/press' },
   { name: 'Contact', href: '/contact', className: 'lg:hidden' },
 ]
 
 const NavItem = ({ children, className, isActive, isMounted, index, ...props }: LinkProps & { index?: number }) => (
   <div
     className={clsx('lg:flex lg:flex-1 lg:w-full', className, {
-      'lg:justify-center': index === 1,
-      'lg:justify-end': index === 2,
+      // 'lg:justify-center': index === 1,
+      // 'lg:justify-end': index === 2,
     })}
   >
     <Link
       className={clsx(
-        'uppercase thinner leading-none px-4 py-2 lg:py-3 h-common border rounded-xl border-transparent transition-colors duration-300',
+        'uppercase thinner leading-none px-4 lg:px-3 py-2 lg:py-3 h-common border rounded-xl border-transparent transition-colors duration-300 lg:w-full flex items-center justify-center',
         {
           'hover:border-primary': isMounted,
           '!border-primary ': isActive && isMounted,
@@ -92,7 +93,7 @@ const Header = ({ pageProps, className }: HeaderProps) => {
         <nav
           ref={navRef}
           className={clsx(
-            'flex flex-row justify-between -mt-2 text-xs lg:justify-start w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-base transition-opacity duration-300',
+            'flex flex-row justify-between -mt-2 text-xs lg:justify-start w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-[0.94rem] transition-opacity duration-300 lg:space-x-2',
             {
               'opacity-0': isHome && !introProseComplete,
             }

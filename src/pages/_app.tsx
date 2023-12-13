@@ -11,7 +11,6 @@ import Layout from '@/components/layout'
 import '@/style/main.css'
 import 'keen-slider/keen-slider.min.css'
 
-
 // Font files can be colocated inside of `pages`
 const cousine = localFont({
   variable: '--font-cousine',
@@ -52,9 +51,9 @@ const App = ({ Component, pageProps, ...props }: AppProps) => {
       `}</style>
       <Head />
       {/*<LazyMotion features={domAnimation}>*/}
-        <Layout pageProps={pageProps}>
-          <Component pageProps={pageProps} />
-        </Layout>
+      <Layout pageProps={pageProps}>
+        <Component pageProps={pageProps} />
+      </Layout>
       {/*</LazyMotion>*/}
     </>
   )
