@@ -40,7 +40,7 @@ const NavItem = ({ children, className, isActive, isMounted, index, ...props }: 
   >
     <Link
       className={clsx(
-        'uppercase thinner leading-none px-4 lg:px-3 py-2 lg:py-3 h-common border rounded-xl border-transparent transition-colors duration-300 lg:w-full flex items-center justify-center',
+        'uppercase thinner leading-none px-3 lg:px-3 py-2 lg:py-3 h-common border rounded-xl border-transparent transition-colors duration-300 lg:w-full flex items-center justify-center',
         {
           'hover:border-primary': isMounted,
           '!border-primary ': isActive && isMounted,
@@ -93,7 +93,7 @@ const Header = ({ pageProps, className }: HeaderProps) => {
         <nav
           ref={navRef}
           className={clsx(
-            'flex flex-row justify-between -mt-2 text-xs lg:justify-start w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-[0.94rem] transition-opacity duration-300 lg:space-x-2',
+            'flex flex-row justify-between -mt-2 text-[0.7rem] lg:justify-start w-[calc(100%+1rem)] lg:w-full -lg:-ml-4 lg:-mt-3 lg:text-[0.94rem] transition-opacity duration-300 space-x-1 lg:space-x-2',
             {
               'opacity-0': isHome && !introProseComplete,
             }

@@ -20,7 +20,7 @@ const PRESS_ITEMS = [
       <Image
         src={bilanzPNG}
         alt={'Bilanz'}
-        className='w-24 h-auto'
+        className='w-20 h-auto'
       />
     ),
     href: 'https://www.handelszeitung.ch/bilanz/bucherer-beteiligt-sich-an-kunst-startup',
@@ -32,7 +32,7 @@ const PRESS_ITEMS = [
       <Image
         src={srfPNG}
         alt={'SRF'}
-        className='w-16 h-auto'
+        className='w-14 h-auto'
       />
     ),
     href: 'https://www.srf.ch/play/tv/kulturplatz/video/kunstmarkt-neu-denken-art-deal?urn=urn:srf:video:50478e09-29b9-4417-9466-9738f0c68c1b',
@@ -44,7 +44,7 @@ const PRESS_ITEMS = [
       <Image
         src={robbPNG}
         alt={'Robb Report'}
-        className='w-36 h-auto'
+        className='w-32 h-auto'
       />
     ),
     href: '/docs/ROBB_Report.pdf',
@@ -57,7 +57,7 @@ const PRESS_ITEMS = [
       <Image
         src={blickPNG}
         alt={'Blick'}
-        className='w-18 h-auto'
+        className='w-16 h-auto'
       />
     ),
     href: 'https://www.blick.ch/wirtschaft/digital-und-faelschungssicher-schweizer-goldhaendler-bringt-das-krypto-vreneli-id18447000.html',
@@ -69,7 +69,7 @@ const PRESS_ITEMS = [
       <Image
         src={pPNG}
         alt={'Persönlich'}
-        className='w-12 h-auto'
+        className='w-10 h-auto'
       />
     ),
     href: 'https://www.persoenlich.com/gesellschaft/meine-frau-mochte-die-uhr-nie',
@@ -81,7 +81,7 @@ const PRESS_ITEMS = [
       <Image
         src={nzzPNG}
         alt={'NZZ Bellevue'}
-        className='w-30 h-auto'
+        className='w-24 h-auto'
       />
     ),
     href: 'https://bellevue.nzz.ch/uhren-schmuck/bucherer-uhren-und-schmuckbrand-arbeitet-mit-dem-startup-artdeal-zusammen-ld.1645753',
