@@ -80,16 +80,16 @@ export const coreMembers: Member[] = [
       // objectPosition: '50% 30%',
     },
   },
-  {
-    group: 'core',
-    name: 'AUDREY RAPPOLD',
-    email: 'audrey@artdeal.ch',
-    position: 'GRAPHIC DESIGN',
-    image: {
-      src: audrey,
-      // objectPosition: '50% 30%',
-    },
-  },
+  // {
+  //   group: 'core',
+  //   name: 'AUDREY RAPPOLD',
+  //   email: 'audrey@artdeal.ch',
+  //   position: 'GRAPHIC DESIGN',
+  //   image: {
+  //     src: audrey,
+  //     // objectPosition: '50% 30%',
+  //   },
+  // },
   // {
   //   group: 'core',
   //   name: 'dimitri erhard',
